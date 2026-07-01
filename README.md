@@ -4,10 +4,6 @@
 
 CLEANROOM-AGENT adapts the *certify-rather-than-debug* orientation of Cleanroom software engineering to LLM-based code generation. Code, tests, and a formal model are derived **independently** from the same frozen requirement-level specification, and each requirement is routed to the strongest available evidence: behavior that can be modeled is **proved** by an external Dafny verifier over all reachable states; behavior that cannot be modeled falls back to **independently generated black-box tests**.
 
-<p align="center">
-  <img src="assets/architecture.png" alt="CLEANROOM-AGENT architecture" width="100%">
-</p>
-
 ---
 
 ## Contents
@@ -24,7 +20,7 @@ CLEANROOM-AGENT adapts the *certify-rather-than-debug* orientation of Cleanroom 
 
 ## How it works
 
-CLEANROOM-AGENT is built on three ideas (see the diagram above):
+CLEANROOM-AGENT is built on three ideas:
 
 1. **Independent derivation (the clean-room property).** From one frozen, requirement-indexed specification, the Code Agent, Test Agent, and Proof Generator each work in isolation. The Code Agent **never sees the tests**; the Test Agent **never sees the code**. They meet only at certification, so evidence is not produced by the same judgment that produced the code.
 
@@ -165,8 +161,7 @@ Sources live in [`data/srs/`](data/srs/).
 ├── data/srs/                # the 10-SRS benchmark
 ├── scripts/                 # metrics collection + RQ2 experiment drivers
 ├── results/                 # archived metrics CSVs + consolidated spreadsheet
-├── docs/                    # methodology, run records, API usage, Dafny workflow
-└── assets/                  # architecture diagram
+└── docs/                    # methodology, run records, API usage, Dafny workflow
 ```
 
 ## Citation
