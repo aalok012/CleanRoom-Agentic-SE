@@ -101,36 +101,6 @@ The `--prompt-strategy` flag selects which prompt variant each stage uses: `base
 
 ---
 
-## Results
-
-Across **6 models × 3 languages × 10 specifications (176 functional requirements)**:
-
-**RQ1 — the clean-room pipeline raises independent proof certification from 38.8% → 67.5%** (Verification Pass Ratio, averaged over targets), winning for every model family and every language:
-
-| Model | Baseline VPR | CLEANROOM-AGENT VPR |
-|---|---:|---:|
-| Gemini 3.1 Pro | 73.4% | **98.8%** |
-| Gemini 3 Flash | 16.7% | **82.8%** |
-| Claude Sonnet 4.6 | 53.2% | **81.4%** |
-| DeepSeek-V3.2 | 19.5% | **58.5%** |
-| GPT-5.1 | 39.6% | **52.0%** |
-| Claude Haiku 4.5 | 33.9% | **51.6%** |
-| **Average** | **38.8%** | **67.5%** |
-
-**RQ2 — on the cost-constrained model, Module-of-Thought prompting gives the best certification** (PassVer@1 69.5% → 78.0% vs. Zero-Shot, at ~20% more tokens/time):
-
-| Strategy | VPR | TPR | PassVer@1 |
-|---|---:|---:|---:|
-| Zero-Shot | 57.3% | 33.2% | 69.5% |
-| Chain-of-Thought | 64.4% | 36.0% | 75.6% |
-| **Module-of-Thought** | **64.7%** | **42.0%** | **78.0%** |
-
-**RQ3 — overhead is 5.47× tokens / 3.07× time per requirement**, front-loaded and amortizing with specification size (the verified kernel and plan are shared across requirements).
-
-Full tables, raw CSVs, and the consolidated spreadsheet: [`results/`](results/) and [`docs/RUN_RESULTS.md`](docs/RUN_RESULTS.md).
-
----
-
 ## Benchmark
 
 Ten real-world SRS documents from the PURE requirements corpus and additional specifications, spanning **2 – 54 functional requirements** (176 total), each generated to Java, Python, and JavaScript:
@@ -164,16 +134,7 @@ Sources live in [`data/srs/`](data/srs/).
 └── docs/                    # methodology, run records, API usage, Dafny workflow
 ```
 
-## Citation
 
-```bibtex
-@inproceedings{cleanroomagent,
-  title     = {CLEANROOM-AGENT: Per-Requirement Certification of LLM-Generated
-               Applications via Independent Derivation and Strongest-Check Routing},
-  author    = {Anonymous},
-  booktitle = {Under review},
-  year      = {2026}
-}
 ```
 
 ## License
