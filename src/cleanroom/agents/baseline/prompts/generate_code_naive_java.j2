@@ -1,0 +1,20 @@
+You are an LLM generating code DIRECTLY from a feature description — no design docs, no
+contracts, no tests. Implement the whole feature in ONE Java class.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+Write a single self-contained Java file. Binding convention (REQUIRED so it can be tested):
+
+    public class Feature_{{ slug }} {
+        public static java.util.Map<String, Object> feature_{{ slug }}(java.util.Map<String, Object> payload) { ... }
+    }
+
+- YOU decide the keys, logic and behavior from the requirements above — invent the interface.
+- On an invalid request, throw IllegalArgumentException.
+- `java.util` / stdlib only, no frameworks, no external libraries, no I/O.
+- The file must be named `Feature_{{ slug }}.java` and compile with `javac` on its own.
+
+Output ONLY the Java source. No prose, no markdown fences.

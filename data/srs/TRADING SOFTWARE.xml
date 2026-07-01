@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping Table version: 28-February-2003 -->
+<TaggedPDF-doc>
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <pdf:Producer>Skia/PDF m82</pdf:Producer>
+         <dc:format>xml</dc:format>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+        
+<?xpacket end="w"?>
+<?xpacket end='r'?>
+<Figure>
+
+<ImageData src="images/SRS (Software Requirement Specification)_img_0.jpg"/>
+</Figure>
+
+<Part>
+<H1>Software Requirements Specification </H1>
+
+<P>for</P>
+
+<Sect>
+<H2> TRADING SOFTWARE </H2>
+
+<P>20March 2020 </P>
+
+<P>Group -2 </P>
+
+<Sect>
+<H3>Member’s Name </H3>
+
+<P>Dhara Vora : 1741046 Mihir Kanjaria : 1741065 Kevin Kukadiya : 1741066 Gaurav Parmar : 1741072 Shreyash Prajapati : 1741081 Krushna Shah : 1741086 Nisarg Gandhi : 1741099 </P>
+</Sect>
+
+<Sect>
+<H2>Table of Contents </H2>
+
+<P>Table of Contents ii 1. Introduction 1 </P>
+
+<P>1.1 Purpose </P>
+
+<P>1.2 Intended Audience and Reading Suggestions </P>
+
+<P>1.3 Project Scope </P>
+
+<P>1.4 References </P>
+
+<P>2. Overall Description 2 </P>
+
+<P>2.1 Product Perspective </P>
+
+<P>2.2 Product Features </P>
+
+<P>2.3 User Classes and Characteristics </P>
+
+<P>2.4 Operating Environment </P>
+
+<P>2.5 Design and Implementation Constraints </P>
+
+<P>2.6 User Documentation </P>
+
+<P>2.7 Assumptions and Dependencies </P>
+
+<P>3. System Features 5 </P>
+
+<P>3.1 System Feature </P>
+
+<P>3.2 Requirement Traceability matrix </P>
+
+<P>4. External Interface Requirements 7 </P>
+
+<P>4.1 User Interfaces </P>
+
+<P>4.2 Hardware Interfaces </P>
+
+<P>4.3 Software Interfaces </P>
+
+<P>4.4 Communications Interfaces </P>
+
+<P>5. Other Nonfunctional Requirements 8 </P>
+
+<P>5.1 Performance Requirements </P>
+
+<P>5.2 Safety Requirements </P>
+
+<P>5.3 Security Requirements </P>
+
+<P>5.4 Software Quality Attributes </P>
+
+<Sect>
+<H2>1. Introduction </H2>
+
+<Sect>
+<H3>1.1 Purpose </H3>
+
+<P>To provide easy to use software for trading listed instruments like stocks online. Software will also ease brokerage firm burden by automating tiduos process around trading. </P>
+</Sect>
+
+<Sect>
+<H3>1.2 Intended Audience and Reading Suggestions </H3>
+
+<P>Intended Audience : software developer, people with exposure to the capital market and stock traders </P>
+
+<P>Reading Suggestion NSE : National Stock Exchange BSE : Bombay Stock Exchange Demat Account : Account that holds financial instruments like stock, bonds in electronic form. Trading : Buying/Selling of listed security EOD data : End Of the Day rate of stock MIS : Margin Intraday Square-off </P>
+</Sect>
+
+<Sect>
+<H3>1.3 Project Scope </H3>
+
+<P>Software is limited to the stocks and future trading only. Option contracts are out of the scope of this project. While EOD data will be provided as per exchange rate, live data feed will be generated using appropriate algorithms. </P>
+</Sect>
+
+<Sect>
+<H3>1.4 References </H3>
+
+<P>● 
+<Link>https://www.ece.rutgers.edu/~marsic/books/SE/projects/TradingLeague/2014-g1-report3.pdf </Link>
+</P>
+
+<P>● 
+<Link>https://gephi.org/users/gephi_srs_document.pdf </Link>
+</P>
+
+<P>● 
+<Link>https://kite.zerodha.com </Link>
+● 
+<Link>https://www1.nseindia.com/technology/content/nnf/TP_CM_Trimmed_NNF_PROTOCOL_4. </Link>
+</P>
+
+<P>
+<Link>1.pdf </Link>
+● 
+<Link>https://www1.nseindia.com/technology/content/nse_schematic.htm </Link>
+</P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>2. Overall Description </H2>
+
+<Sect>
+<H3>2.1 Product Perspective </H3>
+
+<P>A distributed Trading software able to show prices of various stocks in real time. Users can place various types of orders in our trading software. Software is working like a brokerage system in between us and NSE/BSE. After the transaction user can see it's PL statement, Margin to make a good decision for the future. </P>
+</Sect>
+
+<Sect>
+<H3>2.2 Product Features </H3>
+
+<P>1) ER Diagram: </P>
+
+<P>Phase 1: Login/Sign-up system </P>
+<Figure>
+
+<ImageData src="images/SRS (Software Requirement Specification)_img_1.jpg"/>
+</Figure>
+
+<P>Phase 2: Order Placing and Execution </P>
+<Figure>
+
+<ImageData src="images/SRS (Software Requirement Specification)_img_2.jpg"/>
+</Figure>
+
+<P>2) Data Flow Diagram (DFD) Phase 1: Login/Sign-up System </P>
+<Figure>
+
+<ImageData src="images/SRS (Software Requirement Specification)_img_3.jpg"/>
+</Figure>
+<Figure>
+
+<ImageData src="images/SRS (Software Requirement Specification)_img_4.jpg"/>
+</Figure>
+
+<P>2.3 User Classes and Characteristics </P>
+
+<P>Here User are mostly the people who are interested to buy and sell stock. Users should not find any difficulty in placing an order. Users should be able to view the trends of prices of various stocks. All customers are treated equally across all demographics. To use this software all the customers need to have just a demat account and valid ID proof. </P>
+
+<P>2.4 Operating Environment </P>
+
+<P>Operating environment for trading software includes the following:</P>
+
+<P>1) Python 3 version on their desktop </P>
+
+<P>2) Client/Server System </P>
+
+<P>3) database : SQL + databases </P>
+
+<P>4) Platform : Windows OS, Linux OS. </P>
+
+<P>5) 1MBps Good Internet connection </P>
+
+<P>2.5 Design and Implementation Constraints </P>
+
+<P>We will be designing the GUI implementation for the Stock Exchange. We will be reflecting the non-real time update of the stocks of NSE and BSE as the expense of API is high. Also we will be implementing the charts reflecting the changes at a regular interval of 5 minutes but not candle chart.We will be using structured database SQL for our database management.We will be using python Tkinter for GUI. For security we will be authenticating the user by OTP(2-factor authentication).We will design the floating window view of stocks,equity wise allocation of pie-chart,and manage to display the live MTM margin quote. </P>
+
+<P>2.6 User Documentation </P>
+
+<P>Also with our software we will be providing the user manual of how to use our system(including supported OS, Hardware specification) step by step along with the video-tutorials. In the user manual and video-tutorials we will be providing each and every step for place/sell the order including all types , view different charts reflecting the market prices along with history. </P>
+
+<P>2.7 Assumptions and Dependencies </P>
+
+<P>We have strictly assumed that the prices that our software will be reflecting will be of past market values and not real time stocks values.Our software completely depends on alpha vantage api for our data.Software supports only windows and ubuntu latest versions.Also the transactions that are being done will be reflect only on virtual wallets that are stored in our database pertaining user. </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>3. System Features </H2>
+
+<Sect>
+<H3>3.1 Features </H3>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Floating market watch window which shows prices of the stocks. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>To visualize price behaviour, we will display it through a live chart </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>EOD (end of day) chart with profit and low statement. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>We will generate reports like Sector wise allocation </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Equity wise allocation pi chart </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Account balance and live MTM margin quote </LBody>
+</LI>
+</L>
+
+<L>
+<LI>
+<Lbl>3.2 </Lbl>
+
+<LBody>Requirement Traceability Matrix </LBody>
+</LI>
+
+<LI>
+<Lbl>4. </Lbl>
+
+<LBody>External Interface Requirements </LBody>
+</LI>
+</L>
+
+<Table>
+<TR>
+<TD>Business </TD>
+
+<TD>Technical </TD>
+
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD>requirement </TD>
+
+<TD>requirement </TD>
+
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD>number </TD>
+
+<TD>number </TD>
+
+<TD>Test Case </TD>
+
+<TD>Test Steps </TD>
+
+<TD>Test Data </TD>
+
+<TD>Expected </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>1). Enter user_id </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>2).Enter password </TD>
+
+<TD>id=example, </TD>
+
+<TD>Login Successful/Login </TD>
+</TR>
+
+<TR>
+<TD>BR1 </TD>
+
+<TD>TR1 </TD>
+
+<TD>Verify Login </TD>
+
+<TD>3).Click Login </TD>
+
+<TD>password=xyz </TD>
+
+<TD>Error </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>1). Enter user_id 2).Forgot Password </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD>BR1 </TD>
+
+<TD>TR2 </TD>
+
+<TD>Update Login </TD>
+
+<TD>3).OTP authentication 4).Generates new password </TD>
+
+<TD>id=example, password=xyz </TD>
+
+<TD>Update Successful/ Update Error </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>1). Enter user </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>detail 2). Enter Bank details 3). </TD>
+
+<TD/>
+
+<TD>Signup </TD>
+</TR>
+
+<TR>
+<TD>BR1 </TD>
+
+<TD>TR3 </TD>
+
+<TD>Signup </TD>
+
+<TD>Generates client_id </TD>
+
+<TD>id=example, password=xyz </TD>
+
+<TD>Successful/Sign Up Error </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>1). Does the login 2). Enter </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>order detail 3). Click on buy 4) </TD>
+
+<TD/>
+
+<TD>placed order </TD>
+</TR>
+
+<TR>
+<TD>BR2 </TD>
+
+<TD>TR4 </TD>
+
+<TD>Buy </TD>
+
+<TD>Validates with NSE/BSE </TD>
+
+<TD>id=example, password=xyz </TD>
+
+<TD>successfully/Ord er failed </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>1). Does the </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>login 2). Enter order detail 3). </TD>
+
+<TD/>
+
+<TD/>
+</TR>
+
+<TR>
+<TD/>
+
+<TD/>
+
+<TD/>
+
+<TD>Sell the order 4) Validates with </TD>
+
+<TD>id=example, </TD>
+
+<TD>order sold successfully/Ord </TD>
+</TR>
+
+<TR>
+<TD>BR2 </TD>
+
+<TD>TR5 </TD>
+
+<TD>Sell </TD>
+
+<TD>NSE/BSE </TD>
+
+<TD>password=xyz </TD>
+
+<TD>er failed </TD>
+</TR>
+</Table>
+
+<P>4.1 User Interfaces </P>
+
+<P>4.1.1 Login or Sign-up Interface : </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Using this interface a new user can enter his/her details to make an account. After making an account the system will give client_id to that user. Using this client_id user can logged into it. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>If the user already has an account then he/she can directly login into it by entering client_id and password. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>If the user forgot the password then by using ‘Forgot Password Link’ he/she can create the new password. For that, first system will ask the user to enter the email-id and the system will send OTP to that email-id to verify the user. </LBody>
+</LI>
+</L>
+
+<P>4.1.2 Order placing and execution Interface : </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>User can place order of buy or sell on this GUI. In order user can place various types of order like normal, MIS etc. Once the Order is executed then the user cannot cancel the order in-between. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>After the execution of order, based on the past statistics software can calculate P/L statement, Graph of its purchase and sell and many more functionality. GUI visually shows the history of stock prices and it's trends from past to present. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>User can place order from the graph itself. </LBody>
+</LI>
+</L>
+
+<P>4.2 Hardware Interfaces </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>PC or Smartphone </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Key-Board </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Ethernet or Wifi Module </LBody>
+</LI>
+</L>
+
+<P>4.3 Software Interfaces 4.4 Communications Interfaces </P>
+
+<Table>
+<TR>
+<TD>Software Used </TD>
+
+<TD>Description </TD>
+</TR>
+
+<TR>
+<TD>Operating System </TD>
+
+<TD>We have chosen Windows OS, Linux OS for its best support and user friendliness. </TD>
+</TR>
+
+<TR>
+<TD>Database </TD>
+
+<TD>To save the client detail, their orders records we have chosen SQL + database </TD>
+</TR>
+
+<TR>
+<TD>Python 3 </TD>
+
+<TD>To implement the project we have chosen python language for its more interactive support </TD>
+</TR>
+</Table>
+
+<P>● To implement this project we are using GUI. For creating client-server communication we are using TCP/UDP protocol. </P>
+
+<P>5. Other Non-functional Requirements </P>
+
+<P>5.1 Performance Requirements </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The system must be interactive and the delay involved must be less than 6 seconds for establishing database connection. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>So in every action-response of the system, there are no immediate delays. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>There will be a focus on scalability and an efficient system for passing message between the client and the server (ie. for transactions). </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Once the order is placed by a user, NSE/BSE must validate it within 2 or 3 minutes to execute the order. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The server should be able to serve concurrent requests especially when a large number of users are logged in. </LBody>
+</LI>
+</L>
+
+<P>5.2 Safety Requirements </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Information transmission should be securely transmitted to the server without any changes in information. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>There should be a bug tracker available where users can report any bugs they have encountered so that the developers can fix it in the next release. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Clients must not be able to login in different devices with the same client-id at the same time to avoid consistency. </LBody>
+</LI>
+</L>
+
+<P>5.3 Security Requirements </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>User security will be a major priority with features for authentication and encryption for sensitive data such as password. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>All user information and records remains intact in our system. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Our system will send OTP to the user's email-id to verify the user's account. </LBody>
+</LI>
+</L>
+
+<P>5.4 Software Quality Attributes </P>
+
+<L>
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Usability : </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>A key point in the design of this application is ease of use and appeal to the users. </LBody>
+</LI>
+
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>We find ‘Python GUI’ easy to interact with the software. </LBody>
+</LI>
+</L>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Reliability : </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>In order to ensure that there is no confusion to the user in the case of the internet or server failure, all transactions end with a final confirmation, and no changes to the account are made until after this confirmation. </LBody>
+</LI>
+
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>Server failure should also be dealt with by keeping backups of user data. </LBody>
+</LI>
+</L>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Availability : </LBody>
+</LI>
+
+<LI>○ As long as the users have a PC or smartphone that supports this software and a good internet connection, this software is available and can be accessed by anyone anywhere and at any given time. </LI>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Correctness : </LBody>
+</LI>
+
+<LI>○ The ability of software products to perform their exact tasks, as defined by their specification. </LI>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Flexibility : </LBody>
+</LI>
+
+<LI>○ The software should be flexible enough to adapt to possible or future changes in its requirements. </LI>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Robustness : </LBody>
+</LI>
+
+<LI>○ The ability of software systems to react appropriately to abnormal conditions. </LI>
+</L>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Maintainability : </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>Software is more easily maintainable if it has high-quality code that is readable and well-documented. </LBody>
+</LI>
+
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>And it is very important to continuously maintain the software to keep it free from any kinds of malfunctions. </LBody>
+</LI>
+</L>
+</L>
+</L>
+</Sect>
+</Sect>
+</Sect>
+</Sect>
+</Part>
+</TaggedPDF-doc>

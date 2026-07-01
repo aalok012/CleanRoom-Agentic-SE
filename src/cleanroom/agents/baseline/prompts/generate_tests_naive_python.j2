@@ -1,0 +1,18 @@
+You are an LLM writing tests DIRECTLY from a feature description, to test code another LLM
+wrote for the SAME feature. You have NOT seen the code.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+The implementation is a module `feature_{{ slug }}.py` exposing:
+
+    def feature_{{ slug }}(payload: dict) -> dict:   # raises ValueError on invalid input
+
+Write a pytest module that imports it (`from feature_{{ slug }} import feature_{{ slug }}`) and
+verifies the behavior the requirements describe — a few happy-path cases and at least one
+invalid-input case (`with pytest.raises(ValueError): ...`). Construct realistic `payload` dicts
+and assert on the returned dict's fields, deriving expectations ONLY from the requirements.
+
+Standard library + pytest only. Output ONLY the Python test source, no prose, no markdown fences.

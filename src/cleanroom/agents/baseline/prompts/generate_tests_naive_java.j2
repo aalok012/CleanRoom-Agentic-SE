@@ -1,0 +1,28 @@
+You are an LLM writing a test DIRECTLY from a feature description, to test code another LLM
+wrote for the SAME feature. You have NOT seen the code.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+The implementation is `Feature_{{ slug }}.java`:
+
+    public class Feature_{{ slug }} {
+        public static java.util.Map<String, Object> feature_{{ slug }}(java.util.Map<String, Object> payload) { ... }
+    }
+
+Write a PLAIN Java test class (NO JUnit / no external imports — it must compile with `javac` alone):
+
+    public class Feature_{{ slug }}Test {
+        public static void main(String[] args) {
+            // build payloads, call Feature_{{ slug }}.feature_{{ slug }}(payload),
+            // and use `assert` / `if (...) throw new RuntimeException(...)` to check the
+            // behavior the requirements describe (happy paths + one invalid-input case).
+        }
+    }
+
+Derive expectations ONLY from the requirements. The file must be named `Feature_{{ slug }}Test.java`
+and reference the implementation class directly. Use `java.util` / stdlib only.
+
+Output ONLY the Java source. No prose, no markdown fences.

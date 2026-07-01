@@ -1,0 +1,19 @@
+You are an LLM generating code DIRECTLY from a feature description — no design docs, no
+contracts, no tests. Implement the whole feature in ONE Node.js (CommonJS) module.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+Write a single self-contained module. Binding convention (REQUIRED so it can be tested): expose
+ONE entry function
+
+    function feature_{{ slug }}(payload) { ... }   // payload: object of inputs -> returns an object
+
+- YOU decide the keys, logic and behavior from the requirements above — invent the interface.
+- On an invalid request, `throw new Error(...)`.
+- Standard library only (no npm packages), no I/O, no side effects at import.
+- End with: `module.exports = { feature_{{ slug }} };`
+
+Output ONLY the JavaScript source. No prose, no markdown fences.

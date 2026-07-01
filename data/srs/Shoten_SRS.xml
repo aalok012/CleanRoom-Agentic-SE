@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping Table version: 28-February-2003 -->
+<TaggedPDF-doc>
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <pdf:Producer>Skia/PDF m93 Google Docs Renderer</pdf:Producer>
+         <dc:format>xml</dc:format>
+         <dc:title>
+            <rdf:Alt>
+               <rdf:li xml:lang="x-default">Shoten_SRS</rdf:li>
+            </rdf:Alt>
+         </dc:title>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                  
+                           
+<?xpacket end="w"?>
+<?xpacket end='r'?>
+
+<Part>
+<H1>Software Requirements Specification </H1>
+
+<P>for </P>
+</Part>
+
+<Part>
+<H1>Shoten </H1>
+
+<P>Version 1.1 approved Prepared by Amatya Sharma (17CS30042) Udit Desai (17CS30044) IIT Kharagpur </P>
+
+<Sect>
+<H2>Table of Contents </H2>
+
+<P>Document Heading 1 Table of Contents 2 Revision History 3 1. 
+<Link>Introduction </Link>
+
+<Link>4 </Link>
+1.1 
+<Link>Purpose </Link>
+
+<Link>4 </Link>
+</P>
+
+<P>1.2 
+<Link>Document Conventions </Link>
+
+<Link>4 </Link>
+</P>
+
+<P>1.3 
+<Link>Intended Audience and Reading Suggestions </Link>
+
+<Link>5 </Link>
+</P>
+
+<P>1.4 
+<Link>Product Scope </Link>
+
+<Link>5 </Link>
+1.5 
+<Link>References </Link>
+
+<Link>6 </Link>
+</P>
+
+<Sect>
+<H4>2. 
+<Link>Overall Description </Link>
+
+<Link>7 </Link>
+</H4>
+
+<P>2.1 
+<Link>Product Perspective </Link>
+
+<Link>7 </Link>
+</P>
+
+<P>2.2 
+<Link>Product Functions </Link>
+
+<Link>7 </Link>
+</P>
+
+<P>2.3 
+<Link>User Classes and Characteristics </Link>
+
+<Link>7 </Link>
+</P>
+
+<P>2.4 
+<Link>Operating Environment </Link>
+
+<Link>8 </Link>
+</P>
+
+<P>2.5 
+<Link>Design and Implementation Constraints </Link>
+
+<Link>9 </Link>
+</P>
+
+<P>2.6 
+<Link>User Documentation </Link>
+
+<Link>9 </Link>
+</P>
+
+<P>2.7 
+<Link>Assumptions and Dependencies </Link>
+
+<Link>10 </Link>
+</P>
+</Sect>
+
+<Sect>
+<H4>3. 
+<Link>External Interface Requirements </Link>
+
+<Link>11 </Link>
+</H4>
+
+<P>4. 
+<Link>System Features </Link>
+
+<Link>12 </Link>
+</P>
+
+<P>5. 
+<Link>Other Nonfunctional Requirements </Link>
+
+<Link>18 </Link>
+</P>
+
+<P>5.1 
+<Link>Performance Requirements </Link>
+
+<Link>18 </Link>
+</P>
+
+<P>5.2 
+<Link>Safety Requirements </Link>
+
+<Link>18 </Link>
+</P>
+
+<P>5.3 
+<Link>Security Requirements </Link>
+
+<Link>18 </Link>
+</P>
+
+<P>5.4 
+<Link>Software Quality Attributes </Link>
+
+<Link>18 </Link>
+</P>
+
+<P>5.5 
+<Link>Business Rules </Link>
+
+<Link>19 </Link>
+</P>
+</Sect>
+
+<Sect>
+<H4>6. 
+<Link>Other Requirements </Link>
+
+<Link>20 </Link>
+</H4>
+
+<P>Appendix A: Glossary </P>
+
+<P>Appendix B: Analysis Models </P>
+
+<P>Appendix C: To Be Determined List </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>Revision History </H2>
+
+<Table>
+<TR>
+<TH>Name </TH>
+
+<TH>Date </TH>
+
+<TH>Reason For Changes </TH>
+
+<TH>Version </TH>
+</TR>
+
+<TR>
+<TD>Shoten </TD>
+
+<TD>07/03/2019 17/03/2019 </TD>
+
+<TD>First Version of the Software Evaluation Errors </TD>
+
+<TD>1.0 1.1 </TD>
+</TR>
+</Table>
+
+<Sect>
+<H2>1. Introduction </H2>
+
+<Sect>
+<H3>1.1 Purpose </H3>
+
+<P>Deﬁning and describing the functions and speciﬁcations of Shoten, Version 1.1 is the primary goal of this Software Requirements Speciﬁcation(SRS). This Software Requirements Speciﬁcations clearly illustrates, in clear terms, the system’s primary uses and required functionality as speciﬁed by our customer.The intended audience of this SRS document will be the clients who want the software to be built, the authorities of IIT Kharagpur who will be validating the software and the technical professionals developing the software. </P>
+</Sect>
+
+<Sect>
+<H3>1.2 Document Conventions </H3>
+
+<P>The standard font used throughout the document is Times New Roman, with font size 12. The titles of the various sections of this SRS document have been represented in bold, with font size </P>
+
+<P>14. Important parts of the document have been indicated in bold.The name of software Shoten is always mentioned in Italics. </P>
+
+<P>This document uses the following deﬁnitions, acronyms and abbreviations: </P>
+
+<Table>
+<TR>
+<TD>Shoten </TD>
+
+<TD>The name of Application for online book store </TD>
+</TR>
+
+<TR>
+<TD>IIT Kharagpur, IIT KGP </TD>
+
+<TD>Indian Institute of Technology, Kharagpur </TD>
+</TR>
+
+<TR>
+<TD>Institute </TD>
+
+<TD>Indian Institute of Technology, Kharagpur </TD>
+</TR>
+
+<TR>
+<TD>ERP </TD>
+
+<TD>Enterprise Resource Planning, student information portal of IIT KGP </TD>
+</TR>
+
+<TR>
+<TD>Assembled PC </TD>
+
+<TD>A modular type of computer that can be assembled using hardware components storing and processing data, </TD>
+</TR>
+
+<TR>
+<TD>Book stores </TD>
+
+<TD>Book stores which have collaborated with the institute for sale of books on Shoten </TD>
+</TR>
+
+<TR>
+<TD>Barcode </TD>
+
+<TD>A unique identiﬁer assigned to each book </TD>
+</TR>
+
+<TR>
+<TD>Button </TD>
+
+<TD>A user interface element that allows a student to click and inform the system to take the required action </TD>
+</TR>
+
+<TR>
+<TD>Book Inventory </TD>
+
+<TD>Symbolises the database of objects of class </TD>
+</TR>
+
+<TR>
+<TD/>
+
+<TD>book </TD>
+</TR>
+
+<TR>
+<TD>Software </TD>
+
+<TD>Refers to Shoten. </TD>
+</TR>
+
+<TR>
+<TD>Student Representative Body </TD>
+
+<TD>A body elected by students intended to scrutinize the SRS on behalf of the students </TD>
+</TR>
+
+<TR>
+<TD>RAM </TD>
+
+<TD>Random-access memory </TD>
+</TR>
+</Table>
+</Sect>
+
+<Sect>
+<H3>1.3 Intended Audience and Reading Suggestions </H3>
+
+<P>The intended audience of this SRS document will be the clients who want the software to be built, the authorities of IIT Kharagpur who will be validating the software and the technical professionals developing the software.Indirect audience will include the student representative body and book stores and printing stores which have collaborated with the institute for sale of books on Shoten. </P>
+
+<P>This Software Requirements Speciﬁcation document is divided in to multiple subsections. The ﬁrst section includes explanations of the Purpose, Conventions(handles the description of project speciﬁc words, acronyms and abbreviations that will be used in the document), Scope and References of the document. The second section of the document is separated into the following ﬁve diﬀerent sections, each detailing speciﬁc details of system uses and their corresponding actions: Product Perspective, Product Functions, User Characteristics,Operating Environment, Design and Implementation Constraints , Assumptions and Dependencies and User Documentation.. The third section is an enumerated listing of system’s external interface requirements. The fourth section encompasses all of the non-functional requirements described for this system. In the ﬁfth section there exists a Prototype of the system along with a sample scenario that graphically describes the use of the system. The sixth section contains a listing of all related reference materials used in this document. </P>
+</Sect>
+
+<Sect>
+<H3>1.4 Product Scope </H3>
+
+<P>The objective of this project is to create and implement a website for the Shoten which is an online bookstore. The application will be used primarily by students of IIT Kharagpur. The application will allow users to create and maintain individual secured accounts authenticated by institute ERP, search the bookstore database for textbooks, and make secured online purchases. </P>
+
+<P>Students will also be able to lend, and borrow books from other students on payment basis.The system also includes the local bookshops and printing shops for ordering or printing books, along with delivery service.The students as well as the bookshops will be able to contribute to the bookstore database sharing book details to be shared. </P>
+
+<P>Users will also be able to contact site administrators. The application makes borrowing, lending ,purchasing and printing textbooks quicker, easier, and more convenient. </P>
+</Sect>
+
+<Sect>
+<H3>1.5 References </H3>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Template has been borrowed from IEEE Std 830-1998 , IEEE Recommended Practice for Software Requirements Specifications. </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Associated webpages </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>Library IITKGP(
+<Link>http://www.library.iitkgp.ac.in/</Link>
+) </LBody>
+</LI>
+
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>&lt;Reference of Local BookStores and Printing Stores> Will be updated after first revision </LBody>
+</LI>
+</L>
+</L>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Institute IdentityAuthentication </LBody>
+</LI>
+</L>
+
+<P>○ ERP(
+<Link>https://erp.iitkgp.ac.in</Link>
+) </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>2. Overall Description </H2>
+
+<Sect>
+<H3>2.1 Product Perspective </H3>
+
+<P>This product is an entirely new product. It is not a component of a larger system however the system is extended by explicit use of institute ERP System for authentication purposes. The Shoten online bookstore system will interact with a payment portal in order to process purchases from the application. The system will also interact with the bookstore’s Inventory database, which records the quantity of books available for sale or lend in the inventory. </P>
+
+<P>The application must be available to students of institute[1.3] must work correctly in both Google Chrome and Mozilla Firefox. As stated by the customer, there are no hardware or software requirements beyond these including, but not limited to, memory or speciﬁc software packages that need to be utilized nor software packages that need not be utilized. </P>
+</Sect>
+
+<Sect>
+<H3>2.2 Product Functions </H3>
+
+<P>Shoten will provide a number of functions, each is listed below. </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Account Registration </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Account Login </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Search </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Select whether to rent or buy a book or print. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Add or delete to Shopping Cart </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Checkout </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Put on a Restock Request </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Update Account Information </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>View order and shipping status </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>View Account Information </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Account Logout </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Help </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>2.3 User Classes and Characteristics </H3>
+
+<P>System identiﬁes the following user classes: </P>
+
+<Sect>
+<H4>2.3.1 Student : </H4>
+
+<Sect>
+<H4>2.3.1.1 Description : Student registered with the institute </H4>
+
+<P>2.3.1.2 Use Cases: </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Create an account in the system. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Login and logout of the system. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Search for the required book or a print shop. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Buy or rent a book or request a print from a print shop. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Sell or rent a book. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Add books to cart. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Add a print to car. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Pay the seller or receive payment for selling or renting books and printing. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Contact the seller for a restock request. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Update account information. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>View account information. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>View order and shipping status. </LBody>
+</LI>
+</L>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>2.3.2 Book Store : </H4>
+
+<Sect>
+<H4>2.3.2.1 Description: Book stores collaborating with the institute for sale of books on </H4>
+
+<P>Create an account in the system. Display available books. </P>
+
+<P>Shoten </P>
+</Sect>
+
+<Sect>
+<H4>2.3.2.2 Use Cases: </H4>
+
+<P>● ● </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>2.3.2 Print Shop : </H4>
+
+<Sect>
+<H4>2.3.2.1 Description: </H4>
+
+<P>2.3.2.2 Use Cases: </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>2.3.3 Admin: </H4>
+
+<P>2.3.3.1 Description: production. </P>
+
+<Sect>
+<H4>2.3.3.2 Use Cases: </H4>
+
+<P>● ● </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Sell or rent books as required by the customer. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Contact the customer. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Receive payment from the customer. </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Deliver books to the customer. </LBody>
+</LI>
+
+<LI>Printing shops collaborating with the institute for printing of books through Shoten. </LI>
+</L>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Create an account in the system. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Display printing rates. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Print the soft copies provided by the customer. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Contact the customer. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Receive payment from the customer. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Deliver print-outs to the customer. </LBody>
+</LI>
+</L>
+
+<P>The entity to whom the software will be handed over after </P>
+
+<P>Authenticate user account details Manage Sales. </P>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H3>2.4 Operating Environment </H3>
+
+<P>Minimum System Requirements : </P>
+
+<L>
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Operating System : </LBody>
+</LI>
+
+<L>
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>Windows 7 or higher, OS X 10.11 or higher. </LBody>
+</LI>
+
+<LI>
+<Lbl>○ </Lbl>
+
+<LBody>Linux Ubuntu 16.04 or higher version. </LBody>
+</LI>
+</L>
+</L>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Java version 1.8(recommended) </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Shoten does not have any other speciﬁc software requirements </LBody>
+</LI>
+</L>
+
+<P>Minimum Hardware Requirements : </P>
+
+<P>● A properly assembled PC unit with : </P>
+
+<P>○ RAM : At Least 512 MB vRAM. </P>
+
+<P>● Shoten does not have any other speciﬁc hardware requirements. Language : Java , JSP , SQL ,HTML , CSS. Web Browser supported Google Chrome , Mozilla Firefox. Server Application : Apache Tomcat 8.0.15 </P>
+</Sect>
+
+<Sect>
+<H3>2.5 Design and Implementation Constraints </H3>
+
+<P>The Server side will require a high-speed Internet connection to deal with multiple customers visiting the portal network simultaneously and the presence of a single payment service systems necessary for processing a customer's purchases.This will create a constraint on the number of payments processed by the system at a point of time to the limit if the payment server we will be using. On the Client side there is no connection speed restrictions, but they will need to be running Internet Explorer 5.0 or above and a java version 1.8 or above . The Windows 7 or higher operating systems will be required for our software to run eﬃciently. </P>
+
+<P>The project's delivery date of 5/31/19. The development of this software will require a minimum of ten hours per week during the next one and a half months, which will amount to a total of sixty hours. </P>
+
+<P>A strong password ; i.e. a password that meets a number of conditions that are set in place so that user's passwords cannot be easily guessed by an attacker; should be set as the application is not using 128 bit data encryption standards for Login Portal. Generally, these rules include ensuring that the password contains a suﬃcient number of characters and contains not only lowercase letters but also capitals, numbers, and in some cases, symbols. </P>
+
+<P>Other constraints are: </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Cannot implemented as an Android/IOS App </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>No other languages except English is used in this implementation </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Security features haven’t been introduced. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>2.6 User Documentation </H3>
+
+<P>The components delivered alongside the software (soft copy): </P>
+
+<P>● Licence-Terms and Conditions </P>
+
+<P>● User Manuals for software A Slide Show presentation would be provided to the user representatives so that they can use to explain the same to others </P>
+</Sect>
+
+<Sect>
+<H3>2.7 Assumptions and Dependencies </H3>
+
+<P>Since Shoten requires Internet access, it is assumed that the end user has a connection to the Internet. It is also assumed that the user has a web browser able to display the website or a latest java version 1.8 to display the application. </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>3. External Interface Requirements </H2>
+
+<Sect>
+<H3>3.1. System Interfaces: </H3>
+
+<P>The system will interface with the following two systems: </P>
+
+<L>
+<LI>
+<Lbl>1. </Lbl>
+
+<LBody>A payment processing system: The system will access the payment processing system via its web services API. </LBody>
+</LI>
+
+<LI>
+<Lbl>2. </Lbl>
+
+<LBody>The Books Inventory database: The system will interact with the inventory database managed by SQL. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>3.2. User Interfaces: </H3>
+
+<P>The system will provide the ability for students and faculty to access the Shotem Bookstore application via the Internet. </P>
+
+<L>
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>Students will be allowed to search only after login. </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>The payment transaction will include reserving and purchasing textbooks </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>The Users must be required to login at all times in order to perform any transaction. Once logged in the user will be able to update required textbook information per the availability, and make any changes to their personal online account. </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>Administrators will also be required to login at all times. However, they will have limit access via the web-interface only being able to pull predeﬁned reports. The administrators will have to logon to a host machine inside the Shoten Online Bookstore network in order to draft any changes. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>3.3. Hardware Interfaces: </H3>
+
+<P>The desktop used should have Core i3 7th generation processor for both client and server ends. </P>
+</Sect>
+
+<Sect>
+<H3>3.4. Software Interfaces: </H3>
+
+<P>The front-end of software will interact with a database that stores the information necessary for the system to operate. The DBMS must be able to provide, on request data concerning the book details and user data. Additionally, it should take and archive data provided to it by the system maintained on the main server. </P>
+</Sect>
+
+<Sect>
+<H3>3.5. Communication Interfaces: </H3>
+
+<P>Communication function requires HTTP for the local server. </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>4. System Features </H2>
+
+<P>This subsection presents the identiﬁed functional requirements for the Shoten. Where possible, the requirements have been demarcated based on their relevance to the users of the system. </P>
+
+<Sect>
+<H3>4.1. Account Registration </H3>
+
+<P>Description : </P>
+
+<P>The ﬁrst-time users(students/sellers) of Shoten have to create(register) an account in the system, in order to use Shoten. </P>
+
+<P>Stimulus: Click &quot;Register" Button </P>
+
+<P>REQ-1. The system shall allow a non-registered user to create a secure account. REQ-2. The system shall require the following information from the user: Name, Institute Roll Number (in case of Students only),Shop ID(In case of Bookstores) , Mobile Number , Email ID. REQ-3. The system shall assign the user a username and ask for a password. REQ-4. The system shall conﬁrm the password is acceptable. REQ-5. The system shall store the information in the database. </P>
+</Sect>
+
+<Sect>
+<H3>4.2. Account Login </H3>
+
+<P>Description : </P>
+
+<P>The users have to log into their account whenever they want to use Shoten. </P>
+
+<P>Stimulus: Click &quot;Login" Button </P>
+
+<P>REQ-1. The system shall allow a registered user to log-in to their account. REQ-2. The system shall require a username and password from the user. REQ-3. The system will verify the username and password, and the user will be considered “logged-in”. </P>
+</Sect>
+
+<Sect>
+<H3>4.3. Search </H3>
+
+<P>Description : </P>
+
+<P>The users can search for the book of their choice as well as a print shop. </P>
+
+<P>4.3.1. Search a Book Stimulus: Click &quot;Search a Book" Button </P>
+
+<P>REQ-1. The system shall allow a user to search for books by title, author or ISBN number. </P>
+
+<P>REQ-2. The search results will include a list of matching books with picture of the front cover, along with the title, author, price, availability, and condition of the book. </P>
+
+<P>4.3.2. Search a Print Shop Stimulus: Click &quot;Search a Print Shop" Button </P>
+
+<P>REQ-1. The system shall allow a user to search for print shops. REQ-2. The search results will include a list of available print shops with there opening time , closing time and rates. </P>
+</Sect>
+
+<Sect>
+<H3>4.4. Add to Shopping Cart </H3>
+
+<P>Description : </P>
+
+<P>The users have to add the books of their choice to their shopping carts, in order to purchase/rent them. The shopping cart shall display the list of books selected by the user and the total cost of the books. </P>
+
+<P>Stimulus: Click &quot;Add to Shopping Cart" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to temporarily save books that are being considered for purchase into a list associated with their account REQ-2. When viewing the shopping cart list, the system shall display the total price of the books in the cart. </P>
+</Sect>
+
+<Sect>
+<H3>4.5. Delete </H3>
+
+<P>Description : </P>
+
+<P>The user can delete books added to the shopping cart as per his/her requirement. The shopping cart shall indicate the list of books left in the cart after the deletion operation and their total cost. </P>
+
+<P>Stimulus: Click &quot;Delete from Shopping Cart" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to remove any unwanted books from their shopping cart. REQ-2. The system shall provide the user a way to select one of the books in his/ her cart for deletion. REQ-3. After the user has indicated the particular book to be deleted from their shopping cart, the stored list representing the shopping cart should be updated by removing the list, and the display should be updated to show only the books remaining in the cart. </P>
+</Sect>
+
+<Sect>
+<H3>4.6. Rent </H3>
+
+<P>Description : </P>
+
+<P>The users can rent books of their choice. </P>
+
+<P>Stimulus: Click &quot;Rent" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to rent-out books that are in their shopping cart. REQ-2 The system shall prompt the user to enter time period for renting out the books in the cart. REQ-3. The system shall display rent charged for the period of rental and individual rent of the books in the shopping cart. REQ-4. The system shall allow the user to enter their delivery information. REQ-5. After a successful transaction user system shall prompt the user to enter their payment information. REQ-6. On a successful transaction the books (titles and prices and quantities) will be displayed to the screen. </P>
+</Sect>
+
+<Sect>
+<H3>4.7. Purchase </H3>
+
+<P>Description : </P>
+
+<P>The users can purchase books of their choice. </P>
+
+<P>Stimulus: Click &quot;Purchase" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to purchase books that are in their shopping cart. REQ-2. The system shall display total cost of the books in the shopping cart. REQ-3. The system shall allow the user to enter their delivery information. REQ-4. After a successful transaction user system shall prompt the user to enter their payment information. REQ-5. On a successful transaction the books (titles and prices and quantities) will be displayed to the screen. </P>
+</Sect>
+
+<Sect>
+<H3>4.8 Print </H3>
+
+<P>Description : </P>
+
+<P>The users can print books of their choice. </P>
+
+<P>Stimulus: Click &quot;Print" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to request a print from a chosen print shop. REQ-3. The system shall prompt the user to enter the url of the google drive link of the soft copy to be printed. </P>
+
+<P>REQ-3. The system shall display the total cost of printing the soft copy. REQ-4. The system shall allow the user to enter their delivery information. REQ-5. After a successful transaction user system shall prompt the user to enter their payment information. REQ-6. On a successful transaction the delivery status will the displayed. </P>
+</Sect>
+
+<Sect>
+<H3>4.9 Add Book </H3>
+
+<P>Description : </P>
+
+<P>The users(students/bookstores) can add books on Shoten which are for sale/rent. </P>
+
+<P>Stimulus: Click &quot;Add Book" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user , bookstores and printing stores to add books they want to sell / print / rent-out. REQ-2 The user shall be prompted to ﬁll in a form with all details associated with the class ‘Book’ : name , quantity , options for lending or selling , ISBN number , author , price on rental basis , price for selling. REQ-3. The system shall allow the user to enter their payment acceptance details like bank account number , IFSC Code etc. </P>
+</Sect>
+
+<Sect>
+<H3>4.10 Request a Restock </H3>
+
+<P>Description : </P>
+
+<P>The users can get the contact information of the sellers in order to communicate with the sellers and request a restock. </P>
+
+<P>Stimulus: Click &quot;Request s Restock" Button </P>
+
+<P>REQ-1. The system shall allow a user to view various methods of contacting the sellers(bookstore ,printstore or the student sharing the book). REQ-2. The system shall display the store address, telephone number, email address, and directions on how to get to the the sellers(bookstore ,printstore or the student sharing the book). REQ-3. The system should also display a map showing the location of the bookstores and printing stores. </P>
+
+<Sect>
+<H3>4.11. Update Account Information </H3>
+
+<Sect>
+<H4>Description : </H4>
+
+<P>The users can update their account information on Shoten so as to provide their most recent credentials. </P>
+
+<P>Stimulus: Click &quot;Update Account Information" Button </P>
+
+<P>REQ-1. The system shall allow a user to update the information in their account. REQ-2. The user shall be allowed to view and change their name, mailing address, billing address, payment information. REQ-3. The user shall be able to change their password by entering the old one once, and a new one twice. </P>
+
+<P>4.12.View Delivery Status </P>
+</Sect>
+
+<Sect>
+<H4>Description : </H4>
+
+<P>The users can view the delivery status of their order. </P>
+
+<P>Stimulus: Click &quot;View Delivery Status" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to view the shipping status of orders they have placed within the last 30 days. REQ-2. The user must enter a conﬁrmation number to view the shipping status of their order. REQ-3. The system shall then display the shipping date, mailing address, projected delivery date, and status (in transit, delivered, etc.) </P>
+
+<P>4.13.View Account Purchase History </P>
+</Sect>
+
+<Sect>
+<H4>Description : </H4>
+
+<P>The user can view the list of books purchased by them in the past. The purchase history shall also depict the date and cost of the past orders. </P>
+
+<P>Stimulus: Click &quot;View Account Purchase History" Button </P>
+
+<P>REQ-1. The system shall allow a registered and logged-in user to view purchases made with their account within the last two years. REQ-2. The system shall display the date of purchase, payment mode. REQ-3. The system shall display the title of the book, price, and quantity for each book purchased in a given order. </P>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H3>4.14. Account Logout </H3>
+
+<P>Description : </P>
+
+<P>The user can log out of their account after use. </P>
+
+<P>Stimulus: Click &quot;Logout" Button </P>
+
+<P>REQ-1. The system shall allow the registered and logged-in user to exit his/her account, so that access to operations requiring a user to be logged in are now disabled. </P>
+</Sect>
+
+<Sect>
+<H3>4.15. Help </H3>
+
+<Sect>
+<H4>Description : </H4>
+
+<P>The user can see an overview of how to use Shoten. </P>
+
+<P>Stimulus: Click &quot;Help" Button </P>
+
+<P>REQ-1. The system shall allow the user to view an overview of how to use the various operations deﬁned above. REQ-2. The system must allow the user to select one of the operations by name. REQ-3. The system shall then display information on how to use that operation. </P>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>5. Other Nonfunctional Requirements </H2>
+
+<Sect>
+<H3>5.1 Performance Requirements </H3>
+
+<P>The performance requirements are as follows: </P>
+
+<L>
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>System login/logout shall take less than 5 seconds. </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>Searches shall return results within 10 seconds. </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>Orders shall be processed within 10 seconds. </LBody>
+</LI>
+
+<LI>
+<Lbl>• </Lbl>
+
+<LBody>System shall support 1,000 simultaneous users. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>5.2 Safety Requirements </H3>
+
+<P>The system admin will not be answerable for any discrepancies in cash transactions during product delivery between the users. Any misleading or incorrect details regarding the book added to the Book database will lead to a temporary or permanent ban to the Shoten. </P>
+</Sect>
+
+<Sect>
+<H3>5.3 Security Requirements </H3>
+
+<P>A strong password ; i.e. a password that meets a number of conditions that are set in place so that user's passwords cannot be easily guessed by an attacker; should be set as the application is not using any data encryption standards for Login Portal. Generally, these rules include ensuring that the password contains a suﬃcient number of characters and contains not only lowercase letters but also capitals, numbers, and in some cases, symbols. </P>
+
+<P>The system uses third party payment API .Users will need to follow the security requirements as mentioned by the payment application. </P>
+</Sect>
+
+<Sect>
+<H3>5.4 Software Quality Attributes </H3>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Correctness : The correctness of the information displayed on the software will depend on the users/sellers . The system admin will not be held responsible for any discrepancies in the information displayed regarding any book.The software system should undergo feature testing, load testing, and regression testing prior to release and/or deployment. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Flexibility : The software has the ﬂexibility of functioning on multiple operating systems. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Maintainability : The maximum person-time required to ﬁx a security defect (including regression testing and documentation update) must not exceed two person days. Otherwise, the software system must be taken oﬄine or the oﬀending feature disabled.The developers will periodically update the software based upon the feedback of the users. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Portability : The software can be transferred across systems using any data storage device such as a ﬂash drive or a hard drive. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Interoperability : The software has interoperability within the institutes network. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Reusability : Version 1.1 of Shoten has been implemented as an application over the internal network of the institute. It can be implemented as a fully ﬂedged online website operable on the world wide web. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H3>5.5 Business Rules </H3>
+
+<P>The system will have a Super-User role and a User role deﬁned for accessing and interacting with the system.Super-User role must account for the data explorer, data curator, and administrator . The User role will account for the data explorer account-type requirements described in Section 4. The following business rules must apply to the super-user and user roles. </P>
+
+<Sect>
+<H4>5.5.1 Super-User Role </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Supervises back-end system conﬁgurations </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Maintains all schemas and templates </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Maintains all user groups and user accounts </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Maintains all user queries </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>5.5.2 User Role </H4>
+
+<P>● Performs the features allowed in system features[4]. </P>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>6. Other Requirements </H2>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Shoten is a copyright trademark of Shoten, IIT Kharagpur. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Shoten will be released under a Library , IIT Kharagpur. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Licensing requirements: Applicable </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Legal, Copyright and Other notices: All rights reserved by our organization. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Applicable Standards: It should be as per the industry standards </LBody>
+</LI>
+</L>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>Appendix A: Glossary </H2>
+
+<Sect>
+<H4>SRS : </H4>
+
+<P>A software requirements speciﬁcation (SRS) is a comprehensive description of the intended purpose and environment for the software under development. The SRS fully describes what the software will do and how it will be expected to perform </P>
+</Sect>
+
+<Sect>
+<H4>RAM : </H4>
+
+<P>RAM is an acronym for random access memory, a type of computer memory that can be accessed randomly. </P>
+</Sect>
+
+<Sect>
+<H4>PC : </H4>
+
+<P>PC is an acronym for personal computer. </P>
+</Sect>
+
+<Sect>
+<H4>Server : </H4>
+
+<P>A server is a computer or computer program which manages access to a centralized resource or service in a network. </P>
+</Sect>
+
+<Sect>
+<H4>API : </H4>
+
+<P>API is an acronym for Advanced Programming Interface. It is a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service. </P>
+</Sect>
+
+<Sect>
+<H4>HTTP : </H4>
+
+<P>HTTP means HyperText Transfer Protocol. HTTP is the underlying protocol used by the World Wide Web and this protocol deﬁnes how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands. </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H2>Appendix C: To Be Determined List </H2>
+
+<P>List of the TBD (to be determined) references that remain in the SRS so they can be tracked to closure: </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The data set of books and corresponding relevant details as provided by the local book stores and printing stores. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Contact list of library management staﬀ to verify any books details in case of any discrepancies. </LBody>
+</LI>
+</L>
+</Sect>
+</Part>
+</TaggedPDF-doc>

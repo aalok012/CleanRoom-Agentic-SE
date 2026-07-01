@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping Table version: 28-February-2003 -->
+<TaggedPDF-doc>
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <pdf:Producer>Skia/PDF m88</pdf:Producer>
+         <dc:format>xml</dc:format>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
+<?xpacket end='r'?>
+
+<Part>
+<H1>Software Requirements Specification </H1>
+
+<P>for </P>
+</Part>
+
+<Part>
+<H1>Event Management System </H1>
+
+<Table>
+<Caption>
+<P>Version 1.0.0 Prepared by Group Number: 16 </P>
+</Caption>
+
+<TR>
+<TH>Name </TH>
+
+<TH>Roll Number </TH>
+
+<TH>Email </TH>
+</TR>
+
+<TR>
+<TD>Vimal Rajesh </TD>
+
+<TD>B180336CS </TD>
+
+<TD>vimrajesh@gmail.com </TD>
+</TR>
+
+<TR>
+<TD>Puchakayla Dheeraj Reddy </TD>
+
+<TD>B180902CS </TD>
+
+<TD>dheerajreddy.puchakayala@gmail.com </TD>
+</TR>
+
+<TR>
+<TD>P Arjun </TD>
+
+<TD>B180454CS </TD>
+
+<TD>arjun_b180454cs@nitc.ac.in </TD>
+</TR>
+
+<TR>
+<TD>Alok Raj </TD>
+
+<TD>B180411CS </TD>
+
+<TD>alok_b180411cs@nitc.ac.in </TD>
+</TR>
+
+<TR>
+<TD>Kunal Ravikumar Jagtap </TD>
+
+<TD>B180921CS </TD>
+
+<TD>ravikumar_b180921cs@nitc.ac.in </TD>
+</TR>
+
+<TR>
+<TD>Argha Pratim Mandal </TD>
+
+<TD>B180331CS </TD>
+
+<TD>argha_b180331cs@nitc.ac.in </TD>
+</TR>
+</Table>
+
+<P>Instructors: Dr. Abdul Nazeer K A, Dr. Prabhu M Course: CS3002D Database Management </P>
+
+<P>Systems </P>
+
+<Sect>
+<H3>Date: 19 October 2020 </H3>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_0.jpg"/>
+Contents</Figure>
+
+<P>CONTENTS 
+<Link>II </Link>
+REVISIONS 
+<Link>II </Link>
+</P>
+
+<Sect>
+<H5>1 INTRODUCTION 
+<Link>1 </Link>
+</H5>
+
+<P>1.1 DOCUMENT PURPOSE 
+<Link>1 </Link>
+</P>
+
+<P>1.2 PRODUCT SCOPE 
+<Link>1 </Link>
+</P>
+
+<P>1.3 INTENDED AUDIENCE AND DOCUMENT OVERVIEW 
+<Link>1 </Link>
+</P>
+
+<P>1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS 
+<Link>1 </Link>
+</P>
+
+<P>1.5 DOCUMENT CONVENTIONS 
+<Link>1 </Link>
+</P>
+
+<P>1.6 REFERENCES AND ACKNOWLEDGMENTS 
+<Link>2 </Link>
+</P>
+</Sect>
+
+<Sect>
+<H5>2 OVERALL DESCRIPTION 
+<Link>2 </Link>
+</H5>
+
+<P>2.1 PRODUCT OVERVIEW 
+<Link>2 </Link>
+</P>
+
+<P>2.2 PRODUCT FUNCTIONALITY 
+<Link>3 </Link>
+</P>
+
+<P>2.3 DESIGN AND IMPLEMENTATION CONSTRAINTS 
+<Link>3 </Link>
+</P>
+
+<P>2.4 ASSUMPTIONS AND DEPENDENCIES 
+<Link>3 </Link>
+</P>
+</Sect>
+
+<Sect>
+<H5>3 SPECIFIC REQUIREMENTS 
+<Link>4 </Link>
+</H5>
+
+<P>3.1 EXTERNAL INTERFACE REQUIREMENTS 
+<Link>4 </Link>
+</P>
+
+<P>3.2 FUNCTIONAL REQUIREMENTS 
+<Link>4 </Link>
+</P>
+
+<P>3.3 USE CASE MODEL 5 </P>
+</Sect>
+
+<Sect>
+<H5>4 OTHER NON-FUNCTIONAL REQUIREMENTS 
+<Link>6 </Link>
+</H5>
+
+<P>4.1 PERFORMANCE REQUIREMENTS 
+<Link>6 </Link>
+</P>
+
+<P>4.2 SAFETY AND SECURITY REQUIREMENTS 
+<Link>6 </Link>
+</P>
+
+<P>4.3 SOFTWARE QUALITY ATTRIBUTES 
+<Link>6 </Link>
+</P>
+
+<P>5 OTHER REQUIREMENTS 
+<Link>7 </Link>
+</P>
+
+<P>APPENDIX A – DATA DICTIONARY 8 APPENDIX B -GROUP LOG 
+<Link>9 </Link>
+</P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_1.jpg"/>
+Revisions</Figure>
+
+<Table>
+<TR>
+<TH>Version </TH>
+
+<TH>Primary Author(s) </TH>
+
+<TH>Description of Version </TH>
+
+<TH>Date Completed </TH>
+</TR>
+
+<TR>
+<TD>1.0.0 </TD>
+
+<TD>Vimal Rajesh, P Dheeraj Reddy, Alok Raj, P Arjun, Kunal Ravikumar Jagtap, Argha Pratim Mandal </TD>
+
+<TD>First Draft. </TD>
+
+<TD>19/10/2020 </TD>
+</TR>
+</Table>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_2.jpg"/>
+1Introduction</Figure>
+</Sect>
+
+<Sect>
+<H4>1.1 Document Purpose </H4>
+
+<P>This document is a Software Requirements Specification(SRS) for the Event Management System(EMS) for NITC. It lays out the functional, nonfunctional and behavioural requirements. It </P>
+
+<P>includes a set of use cases that describe user interactions that the software must provide to the user for perfect synchronization. The SRS is organized into several sections to help to assist the development of the system. This enables both the client side and the developer side to have a clear picture of the ongoing development. The SRS will be periodically updated based on the incorporation of new features and the feedback received from the end users. </P>
+</Sect>
+
+<Sect>
+<H4>1.2 Product Scope </H4>
+
+<P>The EMS is a web application intended to convey the student fraternity of the campus regarding all the scheduled events. This application is mainly intended for the student community all well as the Event Organising groups of the National Institute of Technology Calicut (NITC). </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>This project enables all the Department Associations like CSEA, MEA, Technical &amp; Cultural Clubs, and Social Initiatives like NSS to post all their events on a unified platform for students to view. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The organizing teams of the respective events are the biggest benefactors, as the word of their event reaches out to the entire student community. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>This enables the organizing team to schedule the event accordingly, in order to avoid clashes between two events. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Students can easily view and register for the event of their choice. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>1.3 Intended Audience and Document Overview </H4>
+
+<P>This SRS is intended for several audiences, including the inmates of the institute, as well as the event organisers,system designers, developers. </P>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The client can use the SRS to verify if the product is acceptable to his/her specifications. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The designers can use the SRS to design the system in such a way that it meets the requirements of the client. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The developer can use the SRS to develop the system functionality as per the clients requirements. </LBody>
+</LI>
+</L>
+
+<P>1.4 Definitions, Acronyms and Abbreviations </P>
+
+<Table>
+<TR>
+<TD>Acronym </TD>
+
+<TD>Full Form </TD>
+</TR>
+
+<TR>
+<TD>SRS </TD>
+
+<TD>Software Requirements Specifications </TD>
+</TR>
+
+<TR>
+<TD>EMS </TD>
+
+<TD>Event Management System </TD>
+</TR>
+
+<TR>
+<TD>NITC </TD>
+
+<TD>National Institute of Technology, Calicut </TD>
+</TR>
+
+<TR>
+<TD>DFD </TD>
+
+<TD>Data Flow Diagram </TD>
+</TR>
+
+<TR>
+<TD>CSEA </TD>
+
+<TD>Computer Science and Engineering Association </TD>
+</TR>
+
+<TR>
+<TD>MEA </TD>
+
+<TD>Mechanical Engineering Association </TD>
+</TR>
+
+<TR>
+<TD>EOCR </TD>
+
+<TD>Event Organising Committee Representative(s) </TD>
+</TR>
+</Table>
+
+<P>1.5 Document Conventions </P>
+
+<Table>
+<TR>
+<TH>Italics </TH>
+
+<TD>Diagram Titles </TD>
+</TR>
+
+<TR>
+<TH>Bolds </TH>
+
+<TD>Headings and Subheadings </TD>
+</TR>
+
+<TR>
+<TH>Line Spacing </TH>
+
+<TD>1.5 </TD>
+</TR>
+
+<TR>
+<TH>Font type and size </TH>
+
+<TD>Arial 11 </TD>
+</TR>
+
+<TR>
+<TH>Font Color </TH>
+
+<TD>Black </TD>
+</TR>
+
+<TR>
+<TH>Header and Footer </TH>
+
+<TD>Page Numbers </TD>
+</TR>
+
+<TR>
+<TH>Headings and Subheadings </TH>
+
+<TD>Bold Arial 13 </TD>
+</TR>
+</Table>
+</Sect>
+
+<Sect>
+<H4>1.6 References and Acknowledgments </H4>
+
+<P>[1] 
+<Link>https://ieeexplore.ieee.org/document/278253 </Link>
+-IEEE Guide for Software Requirements Specifications </P>
+
+<P>[2] 
+<Link>SRS: Software Requirement Specifications Basics – BMC Blogs </Link>
+Website referred to on how to make a clean SRS </P>
+
+<P>[3] 
+<Link>Requirements Specification (SRS Document) | Perforce </Link>
+Website referred to on how to make a clean SRS </P>
+
+<P>[4] P. Rob and C. Coronel, Database Systems Design, Implementation and Management, 7/e, Cengage Learning, 2007. </P>
+
+<P>[5] R. Elmasri and S. B. Navathe, Fundamentals of Database Systems, 7 /e, Pearson Education, 2016 </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_3.jpg"/>
+2Overall Description</Figure>
+
+<Sect>
+<H4>2.1 Product Overview </H4>
+
+<P>This software is a web based application and is a self-contained product, it is not a component of any other program and is basically intended for EMS. Our application’s data is stored in MySQL Server which can be accessed by the developer and retrieved in the required format by the client. </P>
+</Sect>
+
+<Sect>
+<H4>2.2 Product Functionality </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Provides a secure database of stakeholders containing the login credentials and personal information. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Facilitates a step-by-step process of entering, organizing, retrieving, modifying and deleting the data. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Provide administrative access to the clients. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Add and delete client access easily. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Easily append an event to the database. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Provide an ordered list of events added to the database for easy understandability. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Simple Interface for easy and reliable interactivity. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>2.3 Design and Implementation Constraints </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Safety and Security: Users must be enabled to access the website and login with their respective username and password credentials only. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Availability: The website must be running all day long. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Implementation of the database using a centralized database system. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Concurrent Access: The challenges in developing the product will involve scaling it to the required number of stakeholders. The expected number of registered users once launched will be over 4000(strength of NITC community). So providing fast request response time will be a necessity. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>2.4 Assumptions and Dependencies </H4>
+
+<Sect>
+<H4>2.4.1 Assumptions </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Client/User has an active Internet Connection to view the Website. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Client/User runs an Operating System which supports Internet Browsing. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>2.4.2 Dependencies </H4>
+
+<P>● Apache, MySQL and PHP for runtime environment. </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_4.jpg"/>
+3Specific Requirements</Figure>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>3.1 External Interface Requirements </H4>
+
+<Sect>
+<H4>3.1.1 User Interfaces </H4>
+
+<P>The User Interface developed is to make the user’s experience easy, interactive and requiring minimum effort to receive the desired output.The achieve this, a Menu Based Interface is </P>
+</Sect>
+
+<Sect>
+<H4>3.1.2 Hardware Interfaces </H4>
+
+<Sect>
+<H5>3.1.2.1 Requirements for Website Administrator </H5>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>It will be currently implemented on a laptop locally with i5-8250U and 8 GB RAM. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The data is stored in the local machine during the implementation phase. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H5>3.1.2.2 Requirements for EOCR and End Users (Students) </H5>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The website will be functional and accessible from all web browsers. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Basic system configuration is expected to access the web application. </LBody>
+</LI>
+</L>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>3.1.3 Software Interfaces </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Front end development requires HTML, CSS </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Back end Interfacing using PHP </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Database Setup using MySQL </LBody>
+</LI>
+</L>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_5.jpg"/>
+</Figure>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>3.2 Functional Requirements </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Can only be accessed with the provision of the internet. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Only authenticated users i.e., enrolled students in the institution can register and participate in the events. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The user interface provides appropriate error messages in case the user does an error. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The EOCR can post the events on the website and the students can register accordingly. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The EOCR can generate the list of registrants at any point of time. </LBody>
+</LI>
+</L>
+
+<P>3.3 Use Case Model </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_6.jpg"/>
+</Figure>
+
+<P>Fig(3.0) Use Case Diagram </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_7.jpg"/>
+</Figure>
+
+<P>Fig(3.1(a)) DFD 1 (level 0) </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_8.jpg"/>
+</Figure>
+
+<P>Fig (3.1(b)) DFD 2 (level 0) </P>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_9.jpg"/>
+4Other Non-functional Requirements</Figure>
+
+<Sect>
+<H4>4.1 Performance Requirements </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The end product is web based and needs a running server to host it. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The request response time will depend on the latency of the server and the network speed. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>So, an adequate server capable of handling concurrent requests of 750-1000 users at a time is required. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The run time of the application also depends on the hardware of the server hosted on. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.2 Safety and Security Requirements </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Provide safety/security requirements based on your interview with the client -again you may need to be somewhat creative here. At the least, you should have some security for the mobile connection. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The data in the server is to be backed up periodically. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Users are to be provided with unique user ids(Registration Number of the Institute) and passwords. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Secure processing and storage of sensitive information like passwords. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Users are classified on various authorization levels based on which they can access, retrieve and modify data in the database. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Masked password entry will be provided. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.3 Software Quality Attributes </H4>
+
+<Sect>
+<H4>4.3.1 Reliability </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Any event registration by the user is reflected in the database almost instantly. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Basically any UPDATE is reflected in the database in minimal time. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The data of the registrants can be fetched at any point by the EOCR. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.3.2 Operability and Compatibility </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The user can easily get accustomed to the developed interface. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The created web application will ensure smooth user experience and a designated help section will be provided for standard FAQs. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Appropriate error messages are shown up when errors are encountered. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Easy navigation panes and visual cues and images to enable the users to interact with the website comfortably. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.3.3 Performance Efficiency </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>An attempt to incorporate the best website and database practices like normalization to ensure faster request response times. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Since event registration, and user access is real time, an attempt will be made to perform these operations in least possible time. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.3.4 Security </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Unique Login Id(based on Institute Registration Number) and unique password will be provided for every user by default. The password can be updated after the first login. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The web browser will not display the password while entering in the field instead special characters will be displayed to assist the user. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The system’s backend will be accessible to only authorized levels of users i.e the main overlooking system of administrator and the EOCR. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>4.3.5 Maintainability </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Our SQL Server has a database maintenance routine scheduled every week. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Periodic testing and bug fixes will be rolled out based on the feedback from the users. </LBody>
+</LI>
+</L>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_10.jpg"/>
+5Other Requirements</Figure>
+</Sect>
+</Sect>
+</Sect>
+
+<Sect>
+<H4>5.1 Business Rules </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>All the users are expected to have a unique user id (Roll Number). </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The system administrator can add or remove the EOCR. The EOCR can modify/ update or delete their respective event data and registrants data. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>Requires proper input for the fields during registration for an event which will be validated by the already pre-existing data we have. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H4>5.2 Other Expected Requirements </H4>
+
+<L>
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>All the users are expected to be familiar with basic web browsing and web interfaces. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The users are also expected to raise concerns about the existing bugs and issues so that they can be rectified. </LBody>
+</LI>
+
+<LI>
+<Lbl>● </Lbl>
+
+<LBody>The language of the entire web interface will be in English. So basic English is assumed to be known by the corresponding users. </LBody>
+</LI>
+</L>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_11.jpg"/>
+Appendix A – Data Dictionary</Figure>
+
+<Table>
+<TR>
+<TD>CSS </TD>
+
+<TD>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. </TD>
+</TR>
+
+<TR>
+<TD>Database </TD>
+
+<TD>A database is an organized collection of data, generally stored and accessed electronically from a computer system </TD>
+</TR>
+
+<TR>
+<TD>Data Flow Diagram </TD>
+
+<TD>A data-flow diagram is a way of representing a flow of data through a process or a system. </TD>
+</TR>
+
+<TR>
+<TD>Event </TD>
+
+<TD>A planned organized occasion by the Event Organizing Committee to be held for NITC. </TD>
+</TR>
+
+<TR>
+<TD>Event Management </TD>
+
+<TD>The art of organizing and planning events. </TD>
+</TR>
+
+<TR>
+<TD>Event Organizing Committee </TD>
+
+<TD>Group of individuals in charge of organizing an event to be held for NITC. </TD>
+</TR>
+
+<TR>
+<TD>Event Organizing Committee Representative (EOCR) </TD>
+
+<TD>A person from the Event Organizing Committee managing the event. </TD>
+</TR>
+
+<TR>
+<TD>HTML </TD>
+
+<TD>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser </TD>
+</TR>
+
+<TR>
+<TD>National Institute of Technology, Calicut (NITC) </TD>
+
+<TD>The organization for which the application is developed </TD>
+</TR>
+
+<TR>
+<TD>PHP </TD>
+
+<TD>PHP is a general-purpose scripting language especially suited to web development </TD>
+</TR>
+
+<TR>
+<TD>SQL </TD>
+
+<TD>Structured Query Language. SQL is used to communicate with a database. </TD>
+</TR>
+
+<TR>
+<TD>Web Application </TD>
+
+<TD>A web application (or web app) is application software that runs on a web server, unlike computer-based software programs that are stored locally on the Operating System (OS) of the device </TD>
+</TR>
+</Table>
+<Figure>
+
+<ImageData src="images/G16-SRS_img_12.jpg"/>
+Appendix B - Group Log</Figure>
+
+<Sect>
+<H5>First Meeting </H5>
+
+<L>
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>The first meeting started with the deciding of the topic we were supposed to work with for the course project of CS3002D Database Management Systems. </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>A lot of ideas were pitched in including a DigiLocker type Certificate System and digitizing Health Care Management System being the other standout ones. </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>In the end, we fixed on the Event Management System for NITC, since we were the ones who were at a disadvantage in the past, being unable to attend the events of our choice due to lack or no information. So a centralized system for organizing everything at one place was deemed necessary and a mandatory requirement for our campus. </LBody>
+</LI>
+</L>
+
+<P>Second Meeting </P>
+
+<L>
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>Abstract was discussed and written. </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>This was a session where we actually enquired about the technical skills of each other and what we were willing to learn to satisfy the competencies of the project we have chosen. </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>The division of responsibilities for making the website was decided in this meeting. </LBody>
+</LI>
+</L>
+
+<P>All further meetings till 19/10/2020 </P>
+
+<L>
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>The basic outline for the SRS was built initially according to the IEEE format for the SRS provided to us by the course faculty. </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>The fields which we were aware of were filled initially and few websites and books were referred to, to provide further insights. The aforementioned websites and books are mentioned in 1.6 (References section). </LBody>
+</LI>
+
+<LI>
+<Lbl>➔ </Lbl>
+
+<LBody>The SRS was reviewed finally for submission. </LBody>
+</LI>
+</L>
+</Sect>
+</Sect>
+</Sect>
+</Part>
+</TaggedPDF-doc>

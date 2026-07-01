@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<req_document xmlns="req_document.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="req_document.xsd">
+<title>DineOut</title>
+<version>1.0</version>
+<p id="1">
+<title>Introduction</title>
+<p id="1.1">
+<title>Purpose</title>
+<text_body>DineOut is an android application that aims to digitalize the process of various restaurant management operations including ordering and inventory management and POS. This document aims to capture the system requirements and features particularly related to ordering and inventory management to be implemented in DineOut version 1.0, with the later releases on POS (Point of Sale).</text_body>
+</p>
+<p id="1.2">
+<title>Document Conventions</title>
+<text_body>In this complete document, priority is mentioned as "low" or "high" throughout the document. Priorities are only mentioned in section 4 and section 5 along with detailed description of the requirements. Any high-level requirements mentioned elsewhere are assumed to inherit priorities of their detailed counterparts in section 4 and 5. All the user entities are written with the first letter capitalized. Any significant term described in the glossary is made bold and italic in the text; significant terms not described in the glossary are bold in text.</text_body>
+</p>
+<p id="1.3">
+<title>Intended Audience and Reading Suggestions</title>
+<text_body>The purpose of this document is to give a detailed description of the requirements for the DineOut software. It illustrates the purpose, scope and complete description for the development of the system. It also explains external interface requirements and system requirements as well as non-functional requirements. This document is primarily intended to be proposed to a customer for approval and for further processing such as additions to be developed in later releases. Customers can refer to section 3 and 4 for the list of requirements implemented in Version 1.0. This document is also used as a reference for developing and testing Version 1.0 by the development team and testers.</text_body>
+</p>
+<p id="1.4">
+<title>Product Scope</title>
+<text_body>DineOut is a restaurant management system developed with the intention of automating the day to day tasks in a restaurant like order and inventory management, bill generation and taking feedback. This release of the software deals with these tasks only, whereas more areas might be automated in future versions. The main purpose is to improve the performance of the restaurant by eradicating daily paperwork, balancing load during rush hours, minimizing human error, reducing kitchen congestion through chef queues, and reducing labor and expenses. The feedback module helps the restaurant check performance, and monthly/yearly figures can be checked by the billing module to see trends in sales and profits.</text_body>
+</p>
+<p id="1.5">
+<title>References</title>
+<text_body>
+<itemize>
+<item>Android User Interface Guidelines, Available at: https://developer.android.com/guide/practices/ui_guidelines/</item>
+<item>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998.</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="2">
+<title>Overall Description</title>
+<p id="2.1">
+<title>Product Perspective</title>
+<text_body>DineOut app attempts to replace the traditional manual ordering process and is a new self-contained software system consisting of two parts: a mobile application and a Firebase database. The mobile application is used for ordering and interacting with the inventory, while the Firebase database stores inventory and ordering related information about food items like pending and complete order queues. The mobile application has five interfaces, one each for Customer, Manager, Head Chef, Admin and Chef. Manager can see and edit the status of available/reserved tables. The Customer interface consists of a scrollable menu listing available items and their price; selected dishes and placed orders are stored in the pending orders table in Firebase. The Head Chef is notified of pending orders and assigns them to available chef queues. After each dish in an order is prepared, the order is marked completed through the Head Chef interface and the hall manager is notified. The Customer interface has an option for requesting the bill, which is printed through the Manager interface. Admin can add new menus or staff and edit current inventory stock.</text_body>
+</p>
+<p id="2.2">
+<title>Product Functions</title>
+<text_body>The system will: allow Customers to scroll through the menu and select dishes; allow Customers to cancel or edit the order any time before it is prepared; allow Customers to provide feedback on food and service; allow Customers to request the bill; allow Customers to ask for help; allow the Head Chef to assign dishes in an order to chefs according to their specialties; show dish queues and their status for Chefs; allow Admin to perform CRUD operations on Staff Members, Menu Items and Inventory; allow the Head Chef to mark orders complete; allow the Head Chef to approve cancellation of a dish or order; allow the Hall Manager to mark the bill as paid; notify the Hall Manager when a particular order is complete; and allow the Hall Manager to see and edit the status of reserved and available tables and their capacities.</text_body>
+</p>
+<p id="2.3">
+<title>User Classes and Characteristics</title>
+<text_body>There are four types of users that interact with the system: Hall Manager, Customer, Head Chef and Admin. An interface is also provided for Chefs through which they view the status of their order queues, but Chefs do not interact with the system. Customers place orders, modify orders, get the bill and give feedback; no customer information is stored. The Head Chef marks a dish prepared, approves cancellation of an order, and assigns a dish to a particular chef based on specialty. Admin manages the inventory and information related to menu and chefs. The Hall Manager marks the bill as paid, gets notified when an order is complete or a customer asks for help, and can see tables and their status.</text_body>
+</p>
+<p id="2.4">
+<title>Operating Environment</title>
+<text_body>It is an android application running on tablets present in a restaurant. The manager is present at the entrance and the system in the manager's tab shows empty/reserved tables. A tab is present at every table for customers to give orders. When an order is placed the head chef/kitchen manager is notified and adds the order to the appropriate chef queues. Chefs in the kitchen use their interface to check the dishes they have to prepare.</text_body>
+</p>
+<p id="2.5">
+<title>Design and Implementation Constraints</title>
+<text_body>The system should be compatible with and run smoothly on Android version 6.0 or above. DineOut's core system and its user interfaces should be compatible with tablets; running on small android mobile devices is not necessary.</text_body>
+</p>
+<p id="2.6">
+<title>User Documentation</title>
+<text_body>The software is accompanied by a User Manual Version 1.0 and online support at www.dinout.com.</text_body>
+</p>
+<p id="2.7">
+<title>Assumptions and Dependencies</title>
+<text_body>One assumption is that the software will always be used on tablets that have enough resources to run the application. The application uses the Firebase database for online storage of information like orders and menu items, which needs to be in a working state; if the Firebase interface changes, the application must be adjusted accordingly.</text_body>
+</p>
+</p>
+<p id="3">
+<title>External Interface Requirements</title>
+<p id="3.1">
+<title>User Interfaces</title>
+<text_body>The Customer interface contains three screens with a consistent layout: a Place Order screen showing a list of cards of dishes with an image and price per serving; a Timer and Edit/Cancel Order screen shown after confirming the order, with Edit Order and Cancel Order buttons, a completion timer, and a request bill button; and a Feedback screen with a Request Bill button and a multiple-choice question form with a submit button. The Head Chef interface shows current orders in detail with a button to mark each dish cooked and notifications to approve dish removal. The Hall Manager interface shows order-complete notifications with order and table number, a list of orders with a paid status button, and a screen showing table status. The Admin interface provides three screens for Staff Members, Menu Items and Inventory for CRUD operations.</text_body>
+</p>
+<p id="3.2">
+<title>Hardware Interfaces</title>
+<text_body>The system interacts with a bill printer to hand a hard copy of the bill to the customer. For the billing module a credit card reader may be used for payment, but its results are entered into the system manually by the user. A central screen in the kitchen displays the status of order queues.</text_body>
+</p>
+<p id="3.3">
+<title>Software Interfaces</title>
+<text_body>For database services the system uses Firebase. The system runs on android version equal to or above marshmallow 6.0. The system uses the v4 support library Print Helper for connecting to the printer and a driver to connect to the kitchen screen.</text_body>
+</p>
+<p id="3.4">
+<title>Communications Interfaces</title>
+<text_body>DineOut is an android application and communicates with Firebase, a storage server provided by Google. Firebase uses the HTTP protocol for communication, so the device follows the HTTP protocol when connecting to Firebase.</text_body>
+</p>
+</p>
+<p id="4">
+<title>System Requirements</title>
+<p id="4.1">
+<title>Place Order</title>
+<p id="4.1.1">
+<title>Description and Priority</title>
+<text_body>The system gives customers the ability to place their orders. It displays a list of available and unavailable dishes in the menu where unavailable dishes are grayed out. The customer can select multiple dishes and their quantity for a particular order. Priority: high.</text_body>
+</p>
+<p id="4.1.2">
+<title>Stimulus/Response sequences</title>
+<text_body>When the user enters the order page, the system displays a list of available and unavailable dishes with prices. Customer taps an available dish – system shows a popup with the dish name, price per serving, a quantity text box, an OK button and a Cancel button. Customer taps an unavailable dish – nothing happens. Customer enters the quantity and presses OK – system closes the popup and shows a green tick with the quantity and total price. Customer taps Cancel – the popup closes and nothing happens. Customer taps the confirm order button – system closes the order screen and displays a timer with a Cancel Order button and an Edit Order button.</text_body>
+</p>
+<p id="4.1.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+The system will show a list of cards (UI element) of dishes. Each card will have a picture of the dish. Below the dish it shows the price in Rupees per serving.
+</item>
+<item>
+REQ-2:
+The system must show all available and unavailable dishes to the Customer.
+</item>
+<item>
+REQ-3:
+Tap on any of the displayed dish will result in a popup for quantity and a green mark after quantity has been selected.
+</item>
+<item>
+REQ-4:
+The popup for quantity input will not allow the user to enter letters, negative numbers or any invalid characters.
+</item>
+<item>
+REQ-5:
+After completing the order the system will display a timer "Time to complete the order" and it is the total time required to serve the dish keeping in view the previously queued orders. Moreover, it also shows a cancel order button.
+</item>
+<item>
+REQ-6:
+Unavailable dishes must be displayed but their operations must be disabled.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.2">
+<title>Customer Help</title>
+<p id="4.2.1">
+<title>Description and Priority</title>
+<text_body>The system provides help for the customer if the customer faces issues in using the tab. There is a help option in the customer interface; if the customer faces issues or wants other assistance, he can notify the hall manager through the system. Priority: high.</text_body>
+</p>
+<p id="4.2.2">
+<title>Stimulus/Response sequences</title>
+<text_body>The home screen for the customer shows a help button on the top right corner. Customer taps the help button – system shows a popup with two buttons, "Call a waiter to manage order" and "Call a waiter for help". Customer taps any of the buttons – system closes the popup and sends a notification to the Hall Manager including the table number of the Customer.</text_body>
+</p>
+<p id="4.2.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-2:
+The system must give Customer the ability to ask for help.
+</item>
+<item>
+REQ-1:
+When the customer taps on "Call the waiter to manage order", the system must store that the above order was given by the waiter.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.3">
+<title>Chef Order Queue</title>
+<p id="4.3.1">
+<title>Description and Priority</title>
+<text_body>Whenever a new order is placed by the Customer, the dishes in the orders are classified into categories. The system has the information of specialty of each chef; it assigns each dish to a corresponding chef and places it in the order queue of that chef. There is a centralized screen in the kitchen which displays queues for each chef. Each item in the queue is labeled with the name of the dish. Priority: high.</text_body>
+</p>
+<p id="4.3.2">
+<title>Stimulus/Response sequences</title>
+<text_body>Customer taps the Confirm Order button in the Place Order screen – system displays the dishes on the kitchen screen in the corresponding chef's queue.</text_body>
+</p>
+<p id="4.3.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+System will classify the dishes in the order according to category and add this dish on a particular chef's queue in the kitchen screen.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.4">
+<title>Edit Order</title>
+<p id="4.4.1">
+<title>Description and Priority</title>
+<text_body>Customer can edit the order any time before the serving. In editing mode, the customer can change the quantity of the food ordered, and add and remove dishes from the order. Priority: high.</text_body>
+</p>
+<p id="4.4.2">
+<title>Stimulus/Response sequences</title>
+<text_body>The timer screen shows two buttons, Cancel Order and Edit Order. Customer taps Edit Order – system shows the previous menu screen where selected dishes are already marked with a green tick. Customer taps any selected dish – system opens a popup with the previous quantity pre-filled and a Remove Dish button. Customer enters a new quantity and presses OK – system shows an error "Cannot edit &lt;Name&gt; dish" or closes the popup and displays the new quantity. Customer taps Remove Dish – system responds with "Dish &lt;Name&gt; removed" or "Dish &lt;Name&gt; cannot be removed". Customer taps a new dish not previously selected – the stimulus/responses of the Place Order feature are followed.</text_body>
+</p>
+<p id="4.4.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+System must allow the Customer to increase, decrease or even remove the dish from the order any time before serving.
+</item>
+<item>
+REQ-2:
+System must remove the dish or decrease quantity of the dish with the approval of head chef.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.5">
+<title>Cancel Order</title>
+<p id="4.5.1">
+<title>Description and Priority</title>
+<text_body>The system provides an option to cancel the current order. When the customer taps the Cancel Order button, the customer can cancel the order at any time before serving. Priority: high.</text_body>
+</p>
+<p id="4.5.2">
+<title>Stimulus/Response sequences</title>
+<text_body>Customer taps the Cancel Order button – system responds with a popup "Order canceled successfully" or "Order cannot be cancelled".</text_body>
+</p>
+<p id="4.5.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+System must allow the customer to cancel order at any time before serving.
+</item>
+<item>
+REQ-2:
+In cancel order, all the dishes will be presented for approval to the head chef. Only approved dishes will be dropped.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.6">
+<title>Mark Dish as Cooked</title>
+<p id="4.6.1">
+<title>Description and Priority</title>
+<text_body>The head chef can mark the dish of a particular order complete when notified by the chef. Priority: high.</text_body>
+</p>
+<p id="4.6.2">
+<title>Stimulus/Response sequences</title>
+<text_body>The system shows a list of current orders in earliest-first order on the head chef screen. Each order shows order number and table number and a list of dishes, with a Mark Cooked button alongside each dish. Head chef taps the Mark Cooked button on a dish – system changes that button to a green tick. All dishes of a particular order have been marked cooked – system shows a notification to the hall manager saying "Order of Table No &lt;Table No&gt; is ready for serving" and shows a new screen titled "Food Ready" to the Customer with a Request Bill button and MCQs for customer feedback.</text_body>
+</p>
+<p id="4.6.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+System must send a notification to the hall manager once all the dishes of a particular order has been marked "cooked".
+</item>
+<item>
+REQ-2:
+System must replace the timer screen with a new screen having feedback and request bill options.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.7">
+<title>Request Bill</title>
+<p id="4.7.1">
+<title>Description and Priority</title>
+<text_body>Request bill option gives the ability to the customer to ask for the receipt and pay the bill. Priority: high.</text_body>
+</p>
+<p id="4.7.2">
+<title>Stimulus/Response sequences</title>
+<text_body>Customer taps the request bill button – the system prints the bill through a printer and adds a bill to the hall manager's view with a button that says "paid".</text_body>
+</p>
+<p id="4.7.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+The system must notify the hall manager that a customer has request for a bill.
+</item>
+<item>
+REQ-2:
+The system must show Hall manager the order no, table no and total payable amount.
+</item>
+<item>
+REQ-3:
+The system must give ability to the hall manager to change the status of the bill to paid.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.8">
+<title>Customer Feedback</title>
+<p id="4.8.1">
+<title>Description and Priority</title>
+<text_body>The system gives customers the ability to give feedback for the food or overall services. In the feedback screen there are multiple choice questions each having two options, "Satisfactory" and "Unsatisfactory", and a submit button at the end. Priority: high.</text_body>
+</p>
+<p id="4.8.2">
+<title>Stimulus/Response sequences</title>
+<text_body>The customer taps the request bill option – the system shows a feedback screen with multiple choice questions and a submit button.</text_body>
+</p>
+<p id="4.8.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+System must show the feedback screen to the user.
+</item>
+<item>
+REQ-2:
+System must display multiple choice questions for feedback.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.9">
+<title>Add/Edit/Delete Staff Members</title>
+<p id="4.9.1">
+<title>Description and Priority</title>
+<text_body>The system gives the ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters and managers. Priority: high.</text_body>
+</p>
+<p id="4.9.2">
+<title>Stimulus/Response sequences</title>
+<text_body>The Admin/Manage screen shows a grid of staff members with an Add Member button at the top, and Edit and Remove buttons after every entry. Admin taps Add Staff – system opens another screen with a form. Admin fills the information and hits submit – system responds with "&lt;Staff Member&gt; added successfully". Admin taps the edit button – system opens a screen with a form prefilled with existing values. Admin edits the information and hits submit – system responds with "&lt;Staff Member&gt; edited successfully". Admin taps the remove button on a particular row – system responds with "&lt;Staff Name&gt; removed successfully".</text_body>
+</p>
+<p id="4.9.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+Admin should be able to add all necessary information about the staff member.
+</item>
+<item>
+REQ-2:
+System must give admin the ability to edit information about all staff members.
+</item>
+<item>
+REQ-3:
+System must give admin the ability to remove staff members.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+<p id="4.10">
+<title>Add/Edit/Delete Menu Items</title>
+<p id="4.10.1">
+<title>Description and Priority</title>
+<text_body>The system gives the ability to the admin to add, edit and delete menu items. Using this feature an admin can manage the restaurant's menu. Priority: high.</text_body>
+</p>
+<p id="4.10.2">
+<title>Stimulus/response sequences</title>
+<text_body>The Admin screen shows all previously added dishes with an Add Dish button along with Edit and Remove buttons for all available dishes. Admin taps Add Dish – system opens another screen with a form. Admin fills the information and hits submit – system responds with "&lt;Dish&gt; added successfully". Admin taps the edit button – system opens a screen with a form prefilled with existing values. Admin edits the information and hits submit – system responds with "&lt;Dish&gt; edited successfully". Admin taps the remove button on a particular row – system responds with "&lt;Dish&gt; removed successfully".</text_body>
+</p>
+<p id="4.10.3">
+<title>Functional Requirements</title>
+<text_body>
+<itemize>
+<item>
+REQ-1:
+Admin should be able to add all necessary information about the menu item.
+</item>
+<item>
+REQ-2:
+System must give admin the ability to edit information about all menu items.
+</item>
+<item>
+REQ-3:
+System must give admin the ability to remove menu items.
+</item>
+</itemize>
+</text_body>
+</p>
+</p>
+</p>
+<p id="5">
+<title>Nonfunctional Requirements</title>
+<p id="5.1">
+<title>Performance Requirements</title>
+<text_body>The system must be interactive with minimal delays. When scrolling through the menu there should be a delay of no more than 2 seconds before the next page of menu items is displayed. The order should be placed in pending orders and be visible to the head chef/chefs in less than 1 second. Cancel order and updates must be made with little delay. The delay to make a successful connection to the Firebase server should be low for effective real-time communication.</text_body>
+</p>
+<p id="5.2">
+<title>Safety Requirements</title>
+<text_body>The software is environmentally friendly and does not cause any safety violations. The menu has a flexible font that can be zoomed so as to not over constrain the eyes.</text_body>
+</p>
+<p id="5.3">
+<title>Security Requirements</title>
+<text_body>There is a need for proper and encrypted login authentication for head chef and admin, as employee sensitive information and inventory should be protected from hacking. Information transmission should be securely transmitted to Firebase without any changes in information to avoid disturbances in orders and billing.</text_body>
+</p>
+<p id="5.4">
+<title>Software Quality Attributes</title>
+<text_body>Adaptability: there can be a change in the menu and information stored in the database about employees and inventory. Availability: the system is up and running for most of the time. Correctness: the bill generated must be accurate and the orders placed should exactly match the user's selection. Flexibility: software can be modified to change requirements in the future. Interoperability: data is transferred from the customer's end to the kitchen and then the head chef assigns orders to each chef. Maintainability: software can be easily repaired if a fault occurs. Portability: software can be easily installed on devices. Reliability: no matter how many orders are placed, the system must give correct results. Reusability: the current version can be used in future versions. Robustness: software must have checks to ensure unavailable items cannot be selected and that emails and phone numbers added are valid. Testability: all requirements are fulfilled and functions work correctly. Usability: the interface must be easy to use and simple.</text_body>
+</p>
+<p id="5.5">
+<title>Business Rules</title>
+<text_body>The Manager's interface contains the view of free tables and the manager can only view, providing no input to the system. Once the bill is paid, the manager can mark the order as paid. Admin has access to perform add, delete and update operations on the database for menu, inventory and employees, and no other person can modify the data. Customers can place orders from the list of available items, update the order and pay the bill. The Head Chef assigns orders to chefs, can update the queues, and has load balancing functionality. Chefs can only view the orders and cannot remove an order from their queue.</text_body>
+</p>
+</p>
+<p id="Appendix A">
+<title>Glossary</title>
+<text_body>CRUD: create, read, update, and delete, the four basic functions of persistent storage. Print Helper: an android library used to connect to a remote printer and send commands for printing. marshmallow 6.0: Android 6.0 Marshmallow, the sixth major version of the Android operating system.</text_body>
+</p>
+<p id="Appendix C">
+<title>To Be Determined List</title>
+<text_body>Weekly sales report and tracking the most ordered dish and prioritizing its inventory stocking is yet to be determined by the client. Adding POS (point of sale) features to the application is yet to be determined as well.</text_body>
+</p>
+</req_document>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SRS system="Kinmail" type="ECommerceSystem" course="Software Engineering" institution="North South University">
+
+  <Introduction>
+    <Description>This document includes software requirements specifications for an e-commerce website Kinmail. Kinmail is developed to connect buyers and sellers across the country seeking to buy and sell products online conveniently for free without any third parties in between. Internet is a great promotional vehicle and communication channel for connecting buyers and sellers. Consumers can find a product of interest in visiting the website of the retailers (sellers) directly or by searching among the alternatives using a shopping search engine. For the consumers searching for cheap products to buy online and sellers desiring to get some profit out of some unused stuffs, kinmail.com is the best website.</Description>
+
+    <Purpose>The purpose of this document is to give a detailed description of the requirements for "Kinmail". It will explain system constraints, interface and give a complete declaration for the development of the system. The website can be used by users to browse, search and add products to sell to the buyers.</Purpose>
+
+    <Scope>
+      <Statement>Kinmail will be an e-commerce website designed to facilitate buying and selling of products between consumers without the involvement of businesses and hidden costs. The functions that a user will be able to perform in this platform are:</Statement>
+      <Function id="1">Register to the platform</Function>
+      <Function id="2">Log in to the platform</Function>
+      <Function id="3">Browse through the database of available product</Function>
+      <Function id="4">View user profile</Function>
+      <Function id="5">Get contact information of the seller</Function>
+      <Function id="6">View product dashboard</Function>
+    </Scope>
+
+    <ProblemDefinition>The online market is flooded with the availability of online stores including a third party involved either in the case of storage or in the case of delivery/distribution, which normally includes a huge amount of money being expensed in the both shipping and extra charges. So to overcome such concepts we have decided to make a customer to customer transaction based online system where the buyers and sellers make a reasonable discussion of the product involved to make a deal among themselves. With the partial fulfillment of the semester wise project, a need for the study of database and some designing was a must, and what better a way to study all those than to design a functional website. Current online websites involves a third party with the charges of shipping involving many extra charges which is completely reduced in our website, also reducing the over prince hike in the normal products.</ProblemDefinition>
+
+    <Audience>People interested in buying and selling their products without the involvement of any middleman and free of charges are the targeted audience of this platform.</Audience>
+
+    <ToolsToBeUsed>
+      <Frontend>HTML, CSS, JavaScript and Bootstrap</Frontend>
+      <Backend>PHP</Backend>
+      <Database>MySQL</Database>
+      <Platform>Sublime Text, XAMPP</Platform>
+    </ToolsToBeUsed>
+
+    <References>
+      <Reference>Somerville, Software Engineering, 10th ed. England: Addison-Wesley, 2017</Reference>
+    </References>
+
+    <Overview>
+      <Statement>Kinmail will be a C2C based web platform to buy and sell products without any charges, similar to a forum of discussion but for posting and buying online products. Since, it will be designed as a web platform; it can be easily accessed by anyone with Internet access and web browser in their device. The advantages of our platform are:</Statement>
+      <Advantage id="1">Browse and search products easily.</Advantage>
+      <Advantage id="2">Add products without any charges.</Advantage>
+      <Advantage id="3">View product and its details.</Advantage>
+      <Advantage id="4">Contact sellers directly.</Advantage>
+    </Overview>
+  </Introduction>
+
+  <Glossary>
+    <Definitions>
+      <Definition term="C2C e-Commerce">C2C e-commerce is a type of trade relations where both sellers and buyers are consumers, not businesses. Vendors sell their products on the site and buyers purchase what they want. C2C websites benefit from commission fees for listing goods that are normally paid for by the seller. The main advantage of C2C business is that sellers and buyers are reachable. It is also effortless and handy and does not take much time to use.</Definition>
+      <Definition term="Email Authentication">Email authentication is a technical solution to proving that an email is not forged. It provides a way to verify that an email comes from whom it claims to be from. Email authentication is most often used to block harmful or fraudulent uses of email such as phishing and spam which has been implemented in this platform.</Definition>
+      <Definition term="Interface">The interaction between a user and system running on a Web server. The user interface is the Web browser and the Web page it downloaded and rendered.</Definition>
+      <Definition term="Class">Class is a blueprint or prototype that defines the variables and the methods common to all objects of a certain kind.</Definition>
+      <Definition term="Attribute">A database attribute is a column name and the content of the fields under it in a table in a database.</Definition>
+      <Definition term="Relational Database">A relational database is any database that follows the relational model provided by traditional relational database management systems. It is a set of formally described tables from which data can be accessed or reassembled in different ways without having to reorganize the database tables.</Definition>
+    </Definitions>
+    <Acronyms>
+      <Acronym short="C2C">Customer to Customer</Acronym>
+      <Acronym short="HTML">Hypertext Markup Language</Acronym>
+      <Acronym short="CSS">Cascading Style Sheet</Acronym>
+      <Acronym short="DB">Database</Acronym>
+      <Acronym short="DESC">Description</Acronym>
+      <Acronym short="ER">Entity Relationship</Acronym>
+      <Acronym short="DFD">Data Flow Diagram</Acronym>
+    </Acronyms>
+  </Glossary>
+
+  <SystemModel>
+    <StateTransitionDiagram figure="1">State transition diagrams are used to give an abstract description of the behavior of a system. This behavior is analyzed and represented by a series of events that can occur in one or more possible states. Here the system is started with an initial state which is black dot as shown in the above figure. Logged in registered users have privilege to more states than normal users.</StateTransitionDiagram>
+    <SequenceDiagram figure="2">A sequence diagram simply depicts interaction between objects in a sequential order i.e. the order in which these interactions take place. The above figure shows the interaction of the user with various objects of the system acted in sequence to carry out several tasks by user.</SequenceDiagram>
+    <UseCaseDiagram figure="3">A use case is a representation of a user's interaction with the system that shows the relationship between the user and the different use cases in which the user is involved. The above figure shows the use cases of the user in the system. The user must be logged in to perform use cases like add products, view profile, view products dashboard.</UseCaseDiagram>
+    <DataFlowDiagram figure="4" level="0">A data flow diagram (DFD) is a way of representing a flow of data of a process or a system. DFD describes the processes that are involved in a system to transfer data from the input to the file storage and reports generation. The above figure shows the data flow of various processes in Kinmail.</DataFlowDiagram>
+    <ERDiagram figure="5">An Entity Relationship model (ER model) describes the structure of a database with the help of ER diagram. An ER diagram shows the relationship among entity sets and can be later implemented in database. An entity set is a group of similar entities and these entities can have attributes. Above figure shows the entities along with their attributes and relationship among them.</ERDiagram>
+  </SystemModel>
+
+  <FunctionalRequirements>
+    <UserClass id="1" name="Non Registered Users">
+      <Requirement id="4.1.1">
+        <Title>Register to the website</Title>
+        <Desc>The non-registered users can register into the website by entering first name, middle name, last name, gender, profile picture, contact number, birthdate, username, email, password and then verify email. If verification is successful then the page is redirected to the login page.</Desc>
+      </Requirement>
+      <Requirement id="4.1.2">
+        <Title>Search for products</Title>
+        <Desc>A search bar available in the platform can be used to search for the required product. Users can also search through the category of products. Users can input key words in the search bar and if the relevant match is found, then the title matching the word is displayed otherwise, 'No products found' message is displayed.</Desc>
+      </Requirement>
+      <Requirement id="4.1.3">
+        <Title>View product details</Title>
+        <Desc>The information like general details, seller details, product description, pricing details, delivery and warranty details can be seen.</Desc>
+      </Requirement>
+      <Requirement id="4.1.4">
+        <Title>Contact the developer</Title>
+        <Desc>Users can contact any developer by clicking the different social media links associated with the developer for which the information like name, email and message is required.</Desc>
+      </Requirement>
+      <Requirement id="4.1.5">
+        <Title>View the website user manual</Title>
+        <Desc>User can visit help page to view the website user manual. The user manual contains the instructions on how to register to the platform, deal with forgotten password, search for products, contact the seller and so on.</Desc>
+      </Requirement>
+    </UserClass>
+
+    <UserClass id="2" name="Registered Users">
+      <Requirement id="4.2.1">
+        <Title>Login to the website</Title>
+        <Desc>Registered users can log in to the system using their credentials. If username or email and password match then, users are logged in to the platform otherwise, error message for invalid username and password is displayed.</Desc>
+      </Requirement>
+      <Requirement id="4.2.2">
+        <Title>Search for products</Title>
+        <Desc>A search bar available in the platform can be used to search for the required product if available in the database. Both registered and non-registered users can search through the category of products.</Desc>
+      </Requirement>
+      <Requirement id="4.2.3">
+        <Title>View product detail</Title>
+        <Desc>The information like general details, seller details, product description, pricing details, delivery and warranty details can be seen like non-registered users.</Desc>
+      </Requirement>
+      <Requirement id="4.2.4">
+        <Title>Add product</Title>
+        <Desc>Users can add product and its details with their information. They must specify product name, product category, picture of the product, owner name, and description of product, price details, product condition, warranty and home delivery details.</Desc>
+      </Requirement>
+      <Requirement id="4.2.5">
+        <Title>View profile</Title>
+        <Desc>Users can view their name, gender, username, email, contact number, birthdate, profile picture</Desc>
+      </Requirement>
+      <Requirement id="4.2.6">
+        <Title>View product dashboard</Title>
+        <Desc>Users can view the number of products they have added to sell, requested to buy and been offered for the product they put on sale</Desc>
+      </Requirement>
+      <Requirement id="4.2.7">
+        <Title>Contact the developer</Title>
+        <Desc>Users can contact any developer by clicking the different social media links associated with the developer for which the information like name, email and message is required.</Desc>
+      </Requirement>
+      <Requirement id="4.2.8">
+        <Title>View the website user manual</Title>
+        <Desc>User can visit help page to view the website user manual. The user manual contains the instructions on how to register to the platform, deal with forgotten password, search for products, contact the seller.</Desc>
+      </Requirement>
+    </UserClass>
+  </FunctionalRequirements>
+
+  <NonFunctionalRequirements>
+    <SecurityRequirements>
+      <Requirement id="i">Users need to create password containing minimum of 8 alphanumeric characters with both uppercase and lowercase letters including a number.</Requirement>
+      <Requirement id="ii">Users need to verify their email after registering to enter the platform as registered user.</Requirement>
+      <Requirement id="iii">Only the registered users can add products.</Requirement>
+    </SecurityRequirements>
+    <PerformanceRequirements>
+      <Requirement id="i">The web design is responsive, attractive and, easy-to-navigate.</Requirement>
+      <Requirement id="ii">The page loads fast without delay of more than one second.</Requirement>
+      <Requirement id="iii">There is a focussed shopping approach with searching and filtering functionality.</Requirement>
+    </PerformanceRequirements>
+    <SafetyRequirements>
+      <Requirement id="i">The platform is hosted by a secure hosting infrastructure.</Requirement>
+      <Requirement id="ii">It gives a pop-up message whenever an error or accidental decision is made.</Requirement>
+    </SafetyRequirements>
+  </NonFunctionalRequirements>
+
+  <SystemEvolution>
+    <Description>The system evolved by proposing the website with little functionality. We started off by building the basic register and login system with general authentication requirements. We worked on the initial requirements and analyzed it in parallel, and several new requirements came into existence. Later on, we changed the general authentication to robust authentication system with email verification. Then, we added features like customer dashboard and customer profile.</Description>
+    <Stage name="Initial">
+      <Feature>General Authentication</Feature>
+      <Feature>Basic Search</Feature>
+      <Feature>Add products</Feature>
+    </Stage>
+    <Stage name="Final">
+      <Feature>Advanced Search</Feature>
+      <Feature>Customer Dashboard</Feature>
+      <Feature>Customer Profile</Feature>
+      <Feature>Website User Manual</Feature>
+    </Stage>
+  </SystemEvolution>
+
+  <RequirementSpecification>
+    <ProductPerspective>
+      <HardwareInterface>The system can be interfaced through the use of mouse, keyboard and output screen. This system is also accessible and compatible on mobile screen devices provided that the accessing system has internet access.</HardwareInterface>
+      <MemoryConstraint>No specific constraints on memory.</MemoryConstraint>
+    </ProductPerspective>
+
+    <ProductFunction>
+      <UserType name="Normal users" description="Users without signing in to the system.">
+        <Capability>Users can search the products.</Capability>
+        <Capability>Users can view the company profile.</Capability>
+        <Capability>Users can view product profile.</Capability>
+        <Capability>Users can access the user manual.</Capability>
+      </UserType>
+      <UserType name="Authorized users" description="Users with verified username and password.">
+        <Capability>They will have all the privilege of the normal users.</Capability>
+        <Capability>They can add products.</Capability>
+        <Capability>They have their own profile.</Capability>
+        <Capability>They have their own dashboard containing products detail.</Capability>
+      </UserType>
+    </ProductFunction>
+
+    <DatabaseRequirement>
+      <Table name="Users">
+        <Description>The user table is used to store the new users. This table includes id as primary key which is auto generated and incremented. The user can login to the system by entering valid username and password. This table also stores information like date of birth, gender contact number for contacting while buying and selling the products.</Description>
+        <Attribute name="id" type="int" required="Auto Generated primary key(True)"/>
+        <Attribute name="first name" type="string" required="True"/>
+        <Attribute name="last name" type="varchar" required="True"/>
+        <Attribute name="email" type="varchar" required="True"/>
+        <Attribute name="password" type="varchar" required="True"/>
+        <Attribute name="dob" type="date" required="True"/>
+        <Attribute name="gender" type="varchar" required="True"/>
+        <Attribute name="contact" type="bigint" required="True"/>
+      </Table>
+
+      <Table name="Offers">
+        <Description>This table stores the data of the buyer and seller name/username/email who offers the product to the customers and also the information of the offers that you have received from the user or probable buyer.</Description>
+        <Attribute name="id" type="int" required="Auto Generated primary key(True)"/>
+        <Attribute name="Offered to" type="varchar" required="True"/>
+        <Attribute name="Offered by" type="varchar" required="True"/>
+      </Table>
+
+      <Table name="Products">
+        <Description>Every registered user can view the products, buy the product as well as sell their product by adding their product in their profile which is then posted publicly. This table contains the basic properties of the products like product name, price, email of the user, and the category under which it is categorized normally.</Description>
+        <Attribute name="id" type="int" required="Auto Generated primary key(True)"/>
+        <Attribute name="name" type="varchar" required="True"/>
+        <Attribute name="price" type="int" required="True"/>
+        <Attribute name="email" type="varchar" required="True"/>
+        <Attribute name="category" type="varchar" required="True"/>
+      </Table>
+
+      <Table name="Requests">
+        <Description>This table stores the information of the requests made by the registered user and the requests made to the user by the probable buyer who are also the registered user on the site and the requests are stored on the profile page of the user.</Description>
+        <Attribute name="id" type="int" required="Auto Generated primary key(True)"/>
+        <Attribute name="Requested to" type="varchar" required="True"/>
+        <Attribute name="Requested by" type="varchar" required="True"/>
+      </Table>
+
+      <Table name="Product details">
+        <Description>This table contains the detailed information of the products that includes product name, company, price, condition of the product, for how long it has been used till the date which is uploaded in the website for the sale including the home delivery service, warranty period and warranty conditions and extra keywords for the detailed information.</Description>
+        <Attribute name="id" type="int" required="Auto Generated primary key(True)"/>
+        <Attribute name="title" type="varchar" required="True"/>
+        <Attribute name="price" type="int" required="True"/>
+        <Attribute name="email" type="varchar" required="True"/>
+        <Attribute name="description" type="varchar" required="True"/>
+        <Attribute name="negotiable" type="varchar(300)" required="True"/>
+        <Attribute name="productcondition" type="varchar(300)" required="True"/>
+        <Attribute name="usedfor" type="varchar(300)" required="True"/>
+        <Attribute name="warrantyperiod" type="int(11)" required="True"/>
+        <Attribute name="warrantyincludes" type="varchar(300)" required="True"/>
+        <Attribute name="homedelivery" type="int(11)" required="True"/>
+        <Attribute name="imagepath1" type="varchar(500)" required="True"/>
+        <Attribute name="imagepath2" type="varchar(500)" required="False"/>
+        <Attribute name="keywords" type="varchar" required="True"/>
+      </Table>
+    </DatabaseRequirement>
+
+    <UserCharacteristics>The Kinmail platform is used by anyone that has access to the Internet and a web browser. It is assumed that the user is familiar enough with a computer to operate the browser, keyboard and mouse. There are two types of users: Normal User (Non-Registered) and Registered User. The normal users can use the platform to create an account, browse and search different products. They can view different products, product details, and contact website user manual. The registered users have all privilege of normal users. They can add products, view profiles, and view product dashboard.</UserCharacteristics>
+
+    <AssumptionsAndDependencies>
+      <Users>We have assumed that all the users using this platform are capable of connecting their devices to the Internet and navigate the browser on their devices to the address of Kinmail website.</Users>
+      <Provider>We have assumed that the Kinmail will be running on a properly working web server and database system with an Internet connection that allows the system to perform all communications between the users.</Provider>
+      <SuccessFactors>
+        <Factor>The performance of the platform is good.</Factor>
+        <Factor>The information stored are secured and verified.</Factor>
+        <Factor>The system is built with the perspective of HCI.</Factor>
+      </SuccessFactors>
+    </AssumptionsAndDependencies>
+  </RequirementSpecification>
+
+</SRS>

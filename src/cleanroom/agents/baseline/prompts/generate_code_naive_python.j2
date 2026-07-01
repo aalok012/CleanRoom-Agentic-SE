@@ -1,0 +1,20 @@
+You are an LLM generating code DIRECTLY from a feature description — no design docs, no
+contracts, no tests. Implement the whole feature in ONE Python module.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+Write a single self-contained Python module implementing this feature. Binding convention
+(REQUIRED so it can be tested): the module exposes ONE entry function
+
+    def feature_{{ slug }}(payload: dict) -> dict:
+
+- `payload` is a dict of inputs; return a dict result. YOU decide the keys, the logic, and the
+  behavior from the requirements above — invent whatever interface makes sense.
+- On an invalid request, raise ValueError.
+- Standard library only, no I/O, no frameworks. Keep it importable with no side effects.
+
+Output ONLY the Python source of the module (the `feature_{{ slug }}` function plus any helpers
+it needs). No prose, no markdown fences.

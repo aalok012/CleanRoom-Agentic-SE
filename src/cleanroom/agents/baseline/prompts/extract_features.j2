@@ -1,0 +1,19 @@
+You are reading a Software Requirements Specification (SRS). Extract the system's
+FUNCTIONAL features directly from the text below — no behavioral contracts, no design,
+just the features and their functional requirements as the SRS states them.
+
+Return a list of features. For each feature give:
+- id: a short stable id (e.g. "1", "2", "3.1") — use the SRS's own numbering if present, else sequential.
+- name: a short human name for the feature.
+- functional_requirements: the list of that feature's functional requirements, each with
+  - id: "<feature_id>.<n>" (e.g. "1.1")
+  - text: the requirement statement, in plain language taken from the SRS.
+
+Only include FUNCTIONAL requirements (things the system must DO). Skip pure narrative,
+glossary, and non-functional/quality sections. Aim for the real features a developer would
+implement — typically 1 to 12 features.
+
+SRS:
+--------------------------------------------------------------------------------
+{{ srs_text }}
+--------------------------------------------------------------------------------

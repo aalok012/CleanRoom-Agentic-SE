@@ -1,0 +1,23 @@
+You are an LLM writing tests DIRECTLY from a feature description, to test code another LLM
+wrote for the SAME feature. You have NOT seen the code.
+
+Feature {{ feature_id }}: {{ name }}
+Functional requirements:
+{% for r in requirements %}- [{{ r.id }}] {{ r.text }}
+{% endfor %}
+
+The implementation is a CommonJS module `feature_{{ slug }}.js` exposing:
+
+    function feature_{{ slug }}(payload)   // returns an object; throws Error on invalid input
+
+Write a test file using Node's BUILT-IN test runner (no npm packages):
+
+    const test = require('node:test');
+    const assert = require('node:assert');
+    const { feature_{{ slug }} } = require('./feature_{{ slug }}.js');
+
+Add a few `test('...', () => { ... })` cases verifying the requirements — happy paths plus one
+invalid-input case using `assert.throws(() => feature_{{ slug }}(badPayload))`. Build realistic
+`payload` objects and assert on returned fields, deriving expectations ONLY from the requirements.
+
+Output ONLY the JavaScript test source. No prose, no markdown fences.
